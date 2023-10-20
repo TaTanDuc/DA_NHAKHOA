@@ -1,0 +1,63 @@
+﻿using BUS;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace GUI
+{
+    public partial class frmDangNhap : Form
+    {
+        private readonly LogIn_Services logIn_Services = new LogIn_Services();
+        public frmDangNhap()
+        {
+            InitializeComponent();
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void lblTieuDe_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tolstxtTenDangNhap_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            var temp = logIn_Services.LogIn(tolstxtTenDangNhap.Text, tolstxtMatMa.Text);
+            switch (temp)
+            {
+                case 1:
+                    FrmTrangChu frmTrangChu = new FrmTrangChu();
+                    frmTrangChu.ShowDialog();
+                    this.Hide();
+                    break;
+                case 0:
+                    MessageBox.Show("Sai mật khẩu!", "Lỗi");
+                    tolstxtTenDangNhap.Focus();
+                    break;
+                case -1:
+                    MessageBox.Show("Sai tài khoản!", "Lỗi");
+                    tolstxtTenDangNhap.Focus();
+                    break;
+            }
+        }
+
+        private void frmDangNhap_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
