@@ -32,6 +32,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.dgvDSDV = new System.Windows.Forms.DataGridView();
+            this.colMa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colChuanDoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip9 = new System.Windows.Forms.ToolStrip();
             this.tlsbtnSua = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
@@ -45,21 +50,16 @@
             this.tlsbtnThem = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.colMa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colChuanDoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtChuanDoan = new System.Windows.Forms.TextBox();
-            this.txtMoTa = new System.Windows.Forms.TextBox();
-            this.txtDVT = new System.Windows.Forms.TextBox();
-            this.txtDonGia = new System.Windows.Forms.TextBox();
-            this.txtMa = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtDonGia = new System.Windows.Forms.TextBox();
+            this.txtDVT = new System.Windows.Forms.TextBox();
+            this.txtMoTa = new System.Windows.Forms.TextBox();
+            this.txtChuanDoan = new System.Windows.Forms.TextBox();
+            this.txtMa = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSDV)).BeginInit();
             this.toolStrip9.SuspendLayout();
             this.toolStrip8.SuspendLayout();
@@ -100,6 +100,31 @@
             this.dgvDSDV.Name = "dgvDSDV";
             this.dgvDSDV.Size = new System.Drawing.Size(542, 282);
             this.dgvDSDV.TabIndex = 2;
+            // 
+            // colMa
+            // 
+            this.colMa.HeaderText = "Mã điều trị";
+            this.colMa.Name = "colMa";
+            // 
+            // colChuanDoan
+            // 
+            this.colChuanDoan.HeaderText = "Chuẩn đoán";
+            this.colChuanDoan.Name = "colChuanDoan";
+            // 
+            // colMota
+            // 
+            this.colMota.HeaderText = "Mô tả điều trị";
+            this.colMota.Name = "colMota";
+            // 
+            // colSL
+            // 
+            this.colSL.HeaderText = "Đơn vị tính";
+            this.colSL.Name = "colSL";
+            // 
+            // colGia
+            // 
+            this.colGia.HeaderText = "Đơn giá";
+            this.colGia.Name = "colGia";
             // 
             // toolStrip9
             // 
@@ -190,7 +215,7 @@
             this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(8, 281);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(72, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(103, 25);
             this.toolStrip1.TabIndex = 26;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -208,6 +233,7 @@
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(37, 22);
             this.toolStripLabel1.Text = "Thêm";
+            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
             // groupBox1
             // 
@@ -228,93 +254,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin dịch vụ";
             // 
-            // colMa
+            // label6
             // 
-            this.colMa.HeaderText = "Mã điều trị";
-            this.colMa.Name = "colMa";
-            // 
-            // colChuanDoan
-            // 
-            this.colChuanDoan.HeaderText = "Chuẩn đoán";
-            this.colChuanDoan.Name = "colChuanDoan";
-            // 
-            // colMota
-            // 
-            this.colMota.HeaderText = "Mô tả điều trị";
-            this.colMota.Name = "colMota";
-            // 
-            // colSL
-            // 
-            this.colSL.HeaderText = "Đơn vị tính";
-            this.colSL.Name = "colSL";
-            // 
-            // colGia
-            // 
-            this.colGia.HeaderText = "Đơn giá";
-            this.colGia.Name = "colGia";
-            // 
-            // txtChuanDoan
-            // 
-            this.txtChuanDoan.Location = new System.Drawing.Point(101, 79);
-            this.txtChuanDoan.Name = "txtChuanDoan";
-            this.txtChuanDoan.Size = new System.Drawing.Size(146, 20);
-            this.txtChuanDoan.TabIndex = 0;
-            // 
-            // txtMoTa
-            // 
-            this.txtMoTa.Location = new System.Drawing.Point(101, 105);
-            this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.Size = new System.Drawing.Size(146, 20);
-            this.txtMoTa.TabIndex = 0;
-            // 
-            // txtDVT
-            // 
-            this.txtDVT.Location = new System.Drawing.Point(101, 131);
-            this.txtDVT.Name = "txtDVT";
-            this.txtDVT.Size = new System.Drawing.Size(146, 20);
-            this.txtDVT.TabIndex = 0;
-            // 
-            // txtDonGia
-            // 
-            this.txtDonGia.Location = new System.Drawing.Point(101, 157);
-            this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(146, 20);
-            this.txtDonGia.TabIndex = 0;
-            // 
-            // txtMa
-            // 
-            this.txtMa.Location = new System.Drawing.Point(101, 53);
-            this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(146, 20);
-            this.txtMa.TabIndex = 0;
-            this.txtMa.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Mã điều trị";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 79);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Chuẩn đoán";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Mô tả điều trị";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 157);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Đơn giá";
             // 
             // label5
             // 
@@ -325,14 +272,68 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Đơn vị tính";
             // 
-            // label6
+            // label4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 157);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Đơn giá";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Mô tả điều trị";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 79);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Chuẩn đoán";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Mã điều trị";
+            // 
+            // txtDonGia
+            // 
+            this.txtDonGia.Location = new System.Drawing.Point(101, 157);
+            this.txtDonGia.Name = "txtDonGia";
+            this.txtDonGia.Size = new System.Drawing.Size(146, 20);
+            this.txtDonGia.TabIndex = 0;
+            // 
+            // txtDVT
+            // 
+            this.txtDVT.Location = new System.Drawing.Point(101, 131);
+            this.txtDVT.Name = "txtDVT";
+            this.txtDVT.Size = new System.Drawing.Size(146, 20);
+            this.txtDVT.TabIndex = 0;
+            // 
+            // txtMoTa
+            // 
+            this.txtMoTa.Location = new System.Drawing.Point(101, 105);
+            this.txtMoTa.Name = "txtMoTa";
+            this.txtMoTa.Size = new System.Drawing.Size(146, 20);
+            this.txtMoTa.TabIndex = 0;
+            // 
+            // txtChuanDoan
+            // 
+            this.txtChuanDoan.Location = new System.Drawing.Point(101, 79);
+            this.txtChuanDoan.Name = "txtChuanDoan";
+            this.txtChuanDoan.Size = new System.Drawing.Size(146, 20);
+            this.txtChuanDoan.TabIndex = 0;
+            // 
+            // txtMa
+            // 
+            this.txtMa.Location = new System.Drawing.Point(101, 53);
+            this.txtMa.Name = "txtMa";
+            this.txtMa.Size = new System.Drawing.Size(146, 20);
+            this.txtMa.TabIndex = 0;
+            this.txtMa.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // FrmQLDichVu
             // 

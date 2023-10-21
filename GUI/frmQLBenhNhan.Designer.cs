@@ -41,14 +41,14 @@
             this.rdbtnNam = new System.Windows.Forms.RadioButton();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtNgay = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMaBenhNhan = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tlstxtTim = new System.Windows.Forms.ToolStripTextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvBenhNhan = new System.Windows.Forms.DataGridView();
             this.tlsbtnSua = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip3 = new System.Windows.Forms.ToolStrip();
@@ -68,7 +68,7 @@
             this.colAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbThongTin.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBenhNhan)).BeginInit();
             this.toolStrip3.SuspendLayout();
             this.toolStrip4.SuspendLayout();
             this.toolStrip6.SuspendLayout();
@@ -88,92 +88,82 @@
             this.grbThongTin.Controls.Add(this.rdbtnNam);
             this.grbThongTin.Controls.Add(this.txtDiaChi);
             this.grbThongTin.Controls.Add(this.txtNgay);
-            this.grbThongTin.Controls.Add(this.textBox1);
+            this.grbThongTin.Controls.Add(this.txtMaBenhNhan);
             this.grbThongTin.Controls.Add(this.txtTen);
-            this.grbThongTin.Location = new System.Drawing.Point(16, 209);
-            this.grbThongTin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grbThongTin.Location = new System.Drawing.Point(11, 136);
             this.grbThongTin.Name = "grbThongTin";
-            this.grbThongTin.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grbThongTin.Size = new System.Drawing.Size(304, 326);
+            this.grbThongTin.Size = new System.Drawing.Size(203, 212);
             this.grbThongTin.TabIndex = 0;
             this.grbThongTin.TabStop = false;
             this.grbThongTin.Text = "Thông tin bệnh nhân";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(132, 275);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTimePicker1.Location = new System.Drawing.Point(88, 179);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(170, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(115, 20);
             this.dateTimePicker1.TabIndex = 4;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 160);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(6, 104);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 20);
+            this.label6.Size = new System.Drawing.Size(47, 13);
             this.label6.TabIndex = 3;
-            this.label6.Text = "Giơí tính";
+            this.label6.Text = "Giới tính";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 275);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(6, 179);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 20);
+            this.label7.Size = new System.Drawing.Size(61, 13);
             this.label7.TabIndex = 3;
             this.label7.Text = "Ngày khám";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 235);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(6, 153);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 20);
+            this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 3;
             this.label5.Text = "Địa chỉ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 195);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(6, 127);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 20);
+            this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Ngày sinh";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 120);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(6, 78);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 20);
+            this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Tên bệnh nhân";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 80);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(6, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 20);
+            this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Mã bệnh nhân";
             // 
             // rdbtnNu
             // 
             this.rdbtnNu.AutoSize = true;
-            this.rdbtnNu.Location = new System.Drawing.Point(246, 160);
-            this.rdbtnNu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rdbtnNu.Location = new System.Drawing.Point(164, 104);
             this.rdbtnNu.Name = "rdbtnNu";
-            this.rdbtnNu.Size = new System.Drawing.Size(54, 24);
+            this.rdbtnNu.Size = new System.Drawing.Size(39, 17);
             this.rdbtnNu.TabIndex = 3;
             this.rdbtnNu.TabStop = true;
             this.rdbtnNu.Text = "Nữ";
@@ -182,10 +172,9 @@
             // rdbtnNam
             // 
             this.rdbtnNam.AutoSize = true;
-            this.rdbtnNam.Location = new System.Drawing.Point(132, 160);
-            this.rdbtnNam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rdbtnNam.Location = new System.Drawing.Point(88, 104);
             this.rdbtnNam.Name = "rdbtnNam";
-            this.rdbtnNam.Size = new System.Drawing.Size(67, 24);
+            this.rdbtnNam.Size = new System.Drawing.Size(47, 17);
             this.rdbtnNam.TabIndex = 3;
             this.rdbtnNam.TabStop = true;
             this.rdbtnNam.Text = "Nam";
@@ -193,44 +182,39 @@
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(132, 235);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDiaChi.Location = new System.Drawing.Point(88, 153);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(170, 26);
+            this.txtDiaChi.Size = new System.Drawing.Size(115, 20);
             this.txtDiaChi.TabIndex = 2;
             // 
             // txtNgay
             // 
-            this.txtNgay.Location = new System.Drawing.Point(132, 195);
-            this.txtNgay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNgay.Location = new System.Drawing.Point(88, 127);
             this.txtNgay.Name = "txtNgay";
-            this.txtNgay.Size = new System.Drawing.Size(170, 26);
+            this.txtNgay.Size = new System.Drawing.Size(115, 20);
             this.txtNgay.TabIndex = 2;
             // 
-            // textBox1
+            // txtMaBenhNhan
             // 
-            this.textBox1.Location = new System.Drawing.Point(132, 80);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 26);
-            this.textBox1.TabIndex = 2;
+            this.txtMaBenhNhan.Location = new System.Drawing.Point(88, 52);
+            this.txtMaBenhNhan.Name = "txtMaBenhNhan";
+            this.txtMaBenhNhan.Size = new System.Drawing.Size(115, 20);
+            this.txtMaBenhNhan.TabIndex = 2;
             // 
             // txtTen
             // 
-            this.txtTen.Location = new System.Drawing.Point(132, 120);
-            this.txtTen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTen.Location = new System.Drawing.Point(88, 78);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(170, 26);
+            this.txtTen.Size = new System.Drawing.Size(115, 20);
             this.txtTen.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(211, 53);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(141, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(736, 82);
+            this.label1.Size = new System.Drawing.Size(497, 55);
             this.label1.TabIndex = 3;
             this.label1.Text = "Danh sách bệnh nhân";
             // 
@@ -242,10 +226,10 @@
             this.toolStripButton1,
             this.toolStripLabel1,
             this.tlstxtTim});
-            this.toolStrip1.Location = new System.Drawing.Point(907, 169);
+            this.toolStrip1.Location = new System.Drawing.Point(605, 110);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(241, 33);
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.toolStrip1.Size = new System.Drawing.Size(167, 31);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -255,37 +239,37 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(34, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(28, 28);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(84, 30);
+            this.toolStripLabel1.Size = new System.Drawing.Size(56, 28);
             this.toolStripLabel1.Text = "Tìm kiếm";
             // 
             // tlstxtTim
             // 
             this.tlstxtTim.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tlstxtTim.Name = "tlstxtTim";
-            this.tlstxtTim.Size = new System.Drawing.Size(100, 35);
+            this.tlstxtTim.Size = new System.Drawing.Size(68, 31);
             // 
-            // dataGridView1
+            // dgvBenhNhan
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvBenhNhan.AllowUserToAddRows = false;
+            this.dgvBenhNhan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBenhNhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBenhNhan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCustomerID,
             this.colFullName,
             this.colSex,
             this.colBirthDay,
             this.colAddress});
-            this.dataGridView1.Location = new System.Drawing.Point(330, 209);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(814, 418);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvBenhNhan.Location = new System.Drawing.Point(220, 136);
+            this.dgvBenhNhan.Name = "dgvBenhNhan";
+            this.dgvBenhNhan.RowHeadersWidth = 62;
+            this.dgvBenhNhan.Size = new System.Drawing.Size(543, 272);
+            this.dgvBenhNhan.TabIndex = 1;
             // 
             // tlsbtnSua
             // 
@@ -293,13 +277,13 @@
             this.tlsbtnSua.Image = ((System.Drawing.Image)(resources.GetObject("tlsbtnSua.Image")));
             this.tlsbtnSua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tlsbtnSua.Name = "tlsbtnSua";
-            this.tlsbtnSua.Size = new System.Drawing.Size(34, 28);
+            this.tlsbtnSua.Size = new System.Drawing.Size(28, 28);
             this.tlsbtnSua.Text = "toolStripButton3";
             // 
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(42, 28);
+            this.toolStripLabel5.Size = new System.Drawing.Size(26, 28);
             this.toolStripLabel5.Text = "Sữa";
             // 
             // toolStrip3
@@ -309,10 +293,10 @@
             this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tlsbtnSua,
             this.toolStripLabel5});
-            this.toolStrip3.Location = new System.Drawing.Point(16, 589);
+            this.toolStrip3.Location = new System.Drawing.Point(11, 383);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStrip3.Size = new System.Drawing.Size(95, 33);
+            this.toolStrip3.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.toolStrip3.Size = new System.Drawing.Size(67, 31);
             this.toolStrip3.TabIndex = 6;
             this.toolStrip3.Text = "toolStrip3";
             // 
@@ -322,13 +306,13 @@
             this.tlsbtnXoa.Image = ((System.Drawing.Image)(resources.GetObject("tlsbtnXoa.Image")));
             this.tlsbtnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tlsbtnXoa.Name = "tlsbtnXoa";
-            this.tlsbtnXoa.Size = new System.Drawing.Size(34, 28);
+            this.tlsbtnXoa.Size = new System.Drawing.Size(28, 28);
             this.tlsbtnXoa.Text = "toolStripButton3";
             // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(43, 28);
+            this.toolStripLabel4.Size = new System.Drawing.Size(27, 28);
             this.toolStripLabel4.Text = "Xóa";
             // 
             // toolStrip4
@@ -338,10 +322,10 @@
             this.toolStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tlsbtnXoa,
             this.toolStripLabel4});
-            this.toolStrip4.Location = new System.Drawing.Point(225, 540);
+            this.toolStrip4.Location = new System.Drawing.Point(150, 351);
             this.toolStrip4.Name = "toolStrip4";
-            this.toolStrip4.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStrip4.Size = new System.Drawing.Size(96, 33);
+            this.toolStrip4.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.toolStrip4.Size = new System.Drawing.Size(68, 31);
             this.toolStrip4.TabIndex = 6;
             this.toolStrip4.Text = "toolStrip3";
             // 
@@ -351,13 +335,13 @@
             this.tlsbtnThoat.Image = ((System.Drawing.Image)(resources.GetObject("tlsbtnThoat.Image")));
             this.tlsbtnThoat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tlsbtnThoat.Name = "tlsbtnThoat";
-            this.tlsbtnThoat.Size = new System.Drawing.Size(34, 28);
+            this.tlsbtnThoat.Size = new System.Drawing.Size(28, 28);
             this.tlsbtnThoat.Text = "toolStripButton3";
             // 
             // toolStripLabel6
             // 
             this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(57, 28);
+            this.toolStripLabel6.Size = new System.Drawing.Size(37, 28);
             this.toolStripLabel6.Text = "Thoát";
             // 
             // toolStrip6
@@ -367,10 +351,10 @@
             this.toolStrip6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tlsbtnThoat,
             this.toolStripLabel6});
-            this.toolStrip6.Location = new System.Drawing.Point(212, 589);
+            this.toolStrip6.Location = new System.Drawing.Point(141, 383);
             this.toolStrip6.Name = "toolStrip6";
-            this.toolStrip6.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStrip6.Size = new System.Drawing.Size(110, 33);
+            this.toolStrip6.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.toolStrip6.Size = new System.Drawing.Size(78, 31);
             this.toolStrip6.TabIndex = 6;
             this.toolStrip6.Text = "toolStrip3";
             // 
@@ -380,12 +364,13 @@
             this.tlsbtnThem.Image = ((System.Drawing.Image)(resources.GetObject("tlsbtnThem.Image")));
             this.tlsbtnThem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tlsbtnThem.Name = "tlsbtnThem";
-            this.tlsbtnThem.Size = new System.Drawing.Size(34, 28);
+            this.tlsbtnThem.Size = new System.Drawing.Size(28, 28);
+            this.tlsbtnThem.Click += new System.EventHandler(this.tlsbtnThem_Click);
             // 
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(56, 28);
+            this.toolStripLabel3.Size = new System.Drawing.Size(37, 28);
             this.toolStripLabel3.Text = "Thêm";
             // 
             // toolStrip5
@@ -395,10 +380,10 @@
             this.toolStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tlsbtnThem,
             this.toolStripLabel3});
-            this.toolStrip5.Location = new System.Drawing.Point(16, 540);
+            this.toolStrip5.Location = new System.Drawing.Point(11, 351);
             this.toolStrip5.Name = "toolStrip5";
-            this.toolStrip5.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStrip5.Size = new System.Drawing.Size(109, 33);
+            this.toolStrip5.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.toolStrip5.Size = new System.Drawing.Size(109, 31);
             this.toolStrip5.TabIndex = 6;
             this.toolStrip5.Text = "toolStrip3";
             // 
@@ -407,50 +392,44 @@
             this.colCustomerID.HeaderText = "Mã bệnh nhân";
             this.colCustomerID.MinimumWidth = 8;
             this.colCustomerID.Name = "colCustomerID";
-            this.colCustomerID.Width = 150;
             // 
             // colFullName
             // 
             this.colFullName.HeaderText = "Tên bệnh nhân";
             this.colFullName.MinimumWidth = 8;
             this.colFullName.Name = "colFullName";
-            this.colFullName.Width = 150;
             // 
             // colSex
             // 
-            this.colSex.HeaderText = "Giơí tính";
+            this.colSex.HeaderText = "Giới tính";
             this.colSex.MinimumWidth = 8;
             this.colSex.Name = "colSex";
-            this.colSex.Width = 150;
             // 
             // colBirthDay
             // 
             this.colBirthDay.HeaderText = "Ngày sinh";
             this.colBirthDay.MinimumWidth = 8;
             this.colBirthDay.Name = "colBirthDay";
-            this.colBirthDay.Width = 150;
             // 
             // colAddress
             // 
             this.colAddress.HeaderText = "Địa chỉ";
             this.colAddress.MinimumWidth = 8;
             this.colAddress.Name = "colAddress";
-            this.colAddress.Width = 150;
             // 
             // frmQLBenhNhan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 645);
+            this.ClientSize = new System.Drawing.Size(778, 419);
             this.Controls.Add(this.toolStrip5);
             this.Controls.Add(this.toolStrip6);
             this.Controls.Add(this.toolStrip4);
             this.Controls.Add(this.toolStrip3);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvBenhNhan);
             this.Controls.Add(this.grbThongTin);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmQLBenhNhan";
             this.Text = "Danh sách bệnh nhân";
             this.Load += new System.EventHandler(this.frmQLBenhNhan_Load);
@@ -458,7 +437,7 @@
             this.grbThongTin.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBenhNhan)).EndInit();
             this.toolStrip3.ResumeLayout(false);
             this.toolStrip3.PerformLayout();
             this.toolStrip4.ResumeLayout(false);
@@ -492,8 +471,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ToolStripTextBox tlstxtTim;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtMaBenhNhan;
+        private System.Windows.Forms.DataGridView dgvBenhNhan;
         private System.Windows.Forms.ToolStripButton tlsbtnSua;
         private System.Windows.Forms.ToolStripLabel toolStripLabel5;
         private System.Windows.Forms.ToolStrip toolStrip3;
