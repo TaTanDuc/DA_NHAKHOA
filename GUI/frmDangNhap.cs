@@ -53,17 +53,8 @@ namespace GUI
                     this.DialogResult = DialogResult.OK;
                     break;
                 case 0:
-<<<<<<< HEAD
                     MessageBox.Show("Sai thông tinn đăng nhập!", "Lỗi");
-                    tolstxtTenDangNhap.Focus();
-=======
-                    MessageBox.Show("Sai mật khẩu!", "Lỗi");
-                    gntxtMatKhau.Focus();
-                    break;
-                case -1:
-                    MessageBox.Show("Sai tài khoản!", "Lỗi");
                     gntxtTaiKhoan.Focus();
->>>>>>> 0d6a799df4934247c5ceefbfc617505ee26366cd
                     break;
             }
         }

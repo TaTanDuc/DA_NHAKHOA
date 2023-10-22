@@ -72,6 +72,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Image\icons8-dental-tool-50.png" />
+    <Content Include="Image\lock.png" />
+    <Content Include="Image\log_out.png" />
+    <Content Include="Image\person.png" />
     <Content Include="Image\Premium Vector _ Dental clinic logo design vector.jpg" />
     <Content Include="Image\snapedit_1697880802158.png" />
     <Content Include="Image\snapedit_1697899397351.png" />
