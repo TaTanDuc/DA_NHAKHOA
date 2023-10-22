@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace GUI
 {
     public partial class frmTrangChu_new : Form
     {
+        private readonly PhieuKham_Services phieuKham_Services = new PhieuKham_Services();
         public frmTrangChu_new()
         {
             InitializeComponent();
@@ -20,6 +22,17 @@ namespace GUI
         private void guna2ControlBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmTrangChu_new_Load(object sender, EventArgs e)
+        {
+            foreach(var item in phieuKham_Services.GetAll())
+            {
+                var index = guna2DataGridView1.Rows.Add();
+                guna2DataGridView1.Rows[index].Cells[1].Value = item.Customer.FullName;
+                guna2DataGridView1.Rows[index].Cells[2].Value = item.Customer.BirthDay;
+                guna2DataGridView1.Rows[index].Cells[3].Value = item.AppointmentDate;
+            }
         }
     }
 }

@@ -27,11 +27,11 @@ namespace BUS
 
         public void addOrUpdateTreatment(Treatment t)
         {
-            var context = new NhaKhoaDB();
-            
+            using (var context = new NhaKhoaDB())
+            {
                 context.Treatments.AddOrUpdate(t);
                 context.SaveChanges();
-            
+            }
         }
 
         public void addOrUpdateDiagnose(Diagnose d)

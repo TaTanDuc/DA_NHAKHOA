@@ -80,6 +80,7 @@
     <Content Include="Image\snapedit_1697880802158.png" />
     <Content Include="Image\snapedit_1697899397351.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

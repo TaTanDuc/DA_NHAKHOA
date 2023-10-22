@@ -53,7 +53,7 @@ namespace GUI
                     this.DialogResult = DialogResult.OK;
                     break;
                 case 0:
-                    MessageBox.Show("Sai thông tinn đăng nhập!", "Lỗi");
+                    MessageBox.Show("Sai thông tin đăng nhập!", "Lỗi");
                     gntxtTaiKhoan.Focus();
                     break;
             }

@@ -8,7 +8,7 @@ namespace DAL.Entities
     public partial class NhaKhoaDB : DbContext
     {
         public NhaKhoaDB()
-            : base("name=NhaKhoaDB")
+            : base("name=NhaKhoa")
         {
         }
 
@@ -33,6 +33,11 @@ namespace DAL.Entities
 
             modelBuilder.Entity<Customer>()
                 .Property(e => e.Sex)
+                .IsFixedLength()
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Customer>()
+                .Property(e => e.Phone)
                 .IsFixedLength()
                 .IsUnicode(false);
 
@@ -62,6 +67,11 @@ namespace DAL.Entities
 
             modelBuilder.Entity<LogIn>()
                 .Property(e => e.StaffID)
+                .IsFixedLength()
+                .IsUnicode(false);
+
+            modelBuilder.Entity<LogIn>()
+                .Property(e => e.Password)
                 .IsFixedLength()
                 .IsUnicode(false);
 

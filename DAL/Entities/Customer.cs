@@ -31,6 +31,9 @@ namespace DAL.Entities
         [Column(TypeName = "ntext")]
         public string Address { get; set; }
 
+        [StringLength(15)]
+        public string Phone { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ExamTicket> ExamTickets { get; set; }
 

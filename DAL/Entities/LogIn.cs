@@ -13,7 +13,7 @@ namespace DAL.Entities
         [StringLength(10)]
         public string StaffID { get; set; }
 
-        [Column(TypeName = "ntext")]
+        [StringLength(30)]
         public string Password { get; set; }
 
         public virtual Staff Staff { get; set; }
