@@ -41,7 +41,7 @@ namespace GUI
 
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
-
+            gntxtTaiKhoan.Focus();
         }
 
         private void gnbtnDangNhap_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace GUI
             DialogResult d = MessageBox.Show("Thoát chương trình", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (d == DialogResult.Yes)
             {
-                this.Close();
+                Application.Exit();
             }
         }
     }

@@ -34,5 +34,22 @@ namespace GUI
                 guna2DataGridView1.Rows[index].Cells[3].Value = item.AppointmentDate;
             }
         }
+
+    
+
+        private void btnquanLyNhanVien_Click(object sender, EventArgs e)
+        {
+            frmQLNhanVien nv = new frmQLNhanVien();
+            nv.ShowDialog();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult d = MessageBox.Show("Thoát chương trình", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (d == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

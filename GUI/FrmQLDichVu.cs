@@ -91,7 +91,7 @@ namespace GUI
             }
         }
 
-        private void Refresh()
+        private void RefreshC()
         {
             gntxtMa.Clear();
             gntxtMaChuanDoan.Clear();
