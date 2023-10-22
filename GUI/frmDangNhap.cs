@@ -36,7 +36,17 @@ namespace GUI
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            var temp = logIn_Services.LogIn(tolstxtTenDangNhap.Text, tolstxtMatMa.Text);
+            
+        }
+
+        private void frmDangNhap_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gnbtnDangNhap_Click(object sender, EventArgs e)
+        {
+            var temp = logIn_Services.LogIn(gntxtTaiKhoan.Text, gntxtMatKhau.Text);
             switch (temp)
             {
                 case 1:
@@ -46,18 +56,22 @@ namespace GUI
                     break;
                 case 0:
                     MessageBox.Show("Sai mật khẩu!", "Lỗi");
-                    tolstxtTenDangNhap.Focus();
+                    gntxtMatKhau.Focus();
                     break;
                 case -1:
                     MessageBox.Show("Sai tài khoản!", "Lỗi");
-                    tolstxtTenDangNhap.Focus();
+                    gntxtTaiKhoan.Focus();
                     break;
             }
         }
 
-        private void frmDangNhap_Load(object sender, EventArgs e)
+        private void gnbtnThoat_Click(object sender, EventArgs e)
         {
-
+            DialogResult d = MessageBox.Show("Thoát chương trình", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (d == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

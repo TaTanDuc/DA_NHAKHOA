@@ -28,240 +28,250 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangNhap));
-            this.grbDangNhap = new System.Windows.Forms.GroupBox();
-            this.lblMatKhau = new System.Windows.Forms.Label();
-            this.lblTaiKhoan = new System.Windows.Forms.Label();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.tolstxtMatMa = new System.Windows.Forms.ToolStripTextBox();
-            this.tolsbtnMatMa = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tolstxtTenDangNhap = new System.Windows.Forms.ToolStripTextBox();
-            this.tlsbtnTenDangNhap = new System.Windows.Forms.ToolStripButton();
-            this.btnDangNhap = new System.Windows.Forms.Button();
-            this.lblTieuDe = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.gntxtTaiKhoan = new Guna.UI2.WinForms.Guna2TextBox();
+            this.gntxtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2ToggleSwitchLuuThongTin = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.label1 = new System.Windows.Forms.Label();
-            this.ptbQC = new System.Windows.Forms.PictureBox();
-            this.ptbLogo = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.grbDangNhap.SuspendLayout();
-            this.toolStrip2.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbQC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.gnbtnDangNhap = new Guna.UI2.WinForms.Guna2Button();
+            this.gnbtnThoat = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // grbDangNhap
+            // guna2Elipse1
             // 
-            this.grbDangNhap.Controls.Add(this.lblMatKhau);
-            this.grbDangNhap.Controls.Add(this.lblTaiKhoan);
-            this.grbDangNhap.Controls.Add(this.toolStrip2);
-            this.grbDangNhap.Controls.Add(this.toolStrip1);
-            this.grbDangNhap.Controls.Add(this.btnDangNhap);
-            this.grbDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.grbDangNhap.Location = new System.Drawing.Point(266, 66);
-            this.grbDangNhap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grbDangNhap.Name = "grbDangNhap";
-            this.grbDangNhap.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grbDangNhap.Size = new System.Drawing.Size(374, 497);
-            this.grbDangNhap.TabIndex = 0;
-            this.grbDangNhap.TabStop = false;
-            this.grbDangNhap.Text = "Đăng nhập";
+            this.guna2Elipse1.TargetControl = this;
             // 
-            // lblMatKhau
+            // guna2DragControl1
             // 
-            this.lblMatKhau.AutoSize = true;
-            this.lblMatKhau.Location = new System.Drawing.Point(9, 191);
-            this.lblMatKhau.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblMatKhau.Name = "lblMatKhau";
-            this.lblMatKhau.Size = new System.Drawing.Size(101, 25);
-            this.lblMatKhau.TabIndex = 1;
-            this.lblMatKhau.Text = "Mật khẩu";
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.guna2Panel1;
+            this.guna2DragControl1.UseTransparentDrag = true;
             // 
-            // lblTaiKhoan
+            // guna2PictureBox1
             // 
-            this.lblTaiKhoan.AutoSize = true;
-            this.lblTaiKhoan.Location = new System.Drawing.Point(9, 52);
-            this.lblTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTaiKhoan.Name = "lblTaiKhoan";
-            this.lblTaiKhoan.Size = new System.Drawing.Size(107, 25);
-            this.lblTaiKhoan.TabIndex = 1;
-            this.lblTaiKhoan.Text = "Tài khoản";
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(-58, -48);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(480, 489);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
             // 
-            // toolStrip2
+            // guna2PictureBox2
             // 
-            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tolstxtMatMa,
-            this.tolsbtnMatMa});
-            this.toolStrip2.Location = new System.Drawing.Point(4, 235);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStrip2.Size = new System.Drawing.Size(355, 33);
-            this.toolStrip2.TabIndex = 3;
-            this.toolStrip2.Text = "toolStrip1";
-            this.toolStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(74, 12);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(132, 97);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 1;
+            this.guna2PictureBox2.TabStop = false;
             // 
-            // tolstxtMatMa
+            // guna2Panel1
             // 
-            this.tolstxtMatMa.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tolstxtMatMa.Name = "tolstxtMatMa";
-            this.tolstxtMatMa.Size = new System.Drawing.Size(298, 33);
+            this.guna2Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.guna2Panel1.Controls.Add(this.gnbtnThoat);
+            this.guna2Panel1.Controls.Add(this.gnbtnDangNhap);
+            this.guna2Panel1.Controls.Add(this.linkLabel1);
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.guna2ToggleSwitchLuuThongTin);
+            this.guna2Panel1.Controls.Add(this.gntxtMatKhau);
+            this.guna2Panel1.Controls.Add(this.gntxtTaiKhoan);
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox2);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(282, 376);
+            this.guna2Panel1.TabIndex = 2;
             // 
-            // tolsbtnMatMa
+            // guna2Panel2
             // 
-            this.tolsbtnMatMa.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tolsbtnMatMa.Image = ((System.Drawing.Image)(resources.GetObject("tolsbtnMatMa.Image")));
-            this.tolsbtnMatMa.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tolsbtnMatMa.Name = "tolsbtnMatMa";
-            this.tolsbtnMatMa.Size = new System.Drawing.Size(34, 28);
+            this.guna2Panel2.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2Panel2.Location = new System.Drawing.Point(270, 0);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(383, 376);
+            this.guna2Panel2.TabIndex = 3;
             // 
-            // toolStrip1
+            // gntxtTaiKhoan
             // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tolstxtTenDangNhap,
-            this.tlsbtnTenDangNhap});
-            this.toolStrip1.Location = new System.Drawing.Point(4, 94);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(355, 33);
-            this.toolStrip1.TabIndex = 3;
-            this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
+            this.gntxtTaiKhoan.Animated = true;
+            this.gntxtTaiKhoan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.gntxtTaiKhoan.BorderRadius = 6;
+            this.gntxtTaiKhoan.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.gntxtTaiKhoan.BorderThickness = 2;
+            this.gntxtTaiKhoan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gntxtTaiKhoan.DefaultText = "";
+            this.gntxtTaiKhoan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.gntxtTaiKhoan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.gntxtTaiKhoan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.gntxtTaiKhoan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.gntxtTaiKhoan.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gntxtTaiKhoan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gntxtTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gntxtTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.gntxtTaiKhoan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gntxtTaiKhoan.Location = new System.Drawing.Point(22, 158);
+            this.gntxtTaiKhoan.Name = "gntxtTaiKhoan";
+            this.gntxtTaiKhoan.PasswordChar = '\0';
+            this.gntxtTaiKhoan.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.gntxtTaiKhoan.PlaceholderText = "";
+            this.gntxtTaiKhoan.SelectedText = "";
+            this.gntxtTaiKhoan.Size = new System.Drawing.Size(228, 26);
+            this.gntxtTaiKhoan.TabIndex = 2;
             // 
-            // tolstxtTenDangNhap
+            // gntxtMatKhau
             // 
-            this.tolstxtTenDangNhap.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tolstxtTenDangNhap.Name = "tolstxtTenDangNhap";
-            this.tolstxtTenDangNhap.Size = new System.Drawing.Size(298, 33);
-            this.tolstxtTenDangNhap.Click += new System.EventHandler(this.tolstxtTenDangNhap_Click);
+            this.gntxtMatKhau.Animated = true;
+            this.gntxtMatKhau.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.gntxtMatKhau.BorderRadius = 6;
+            this.gntxtMatKhau.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.gntxtMatKhau.BorderThickness = 2;
+            this.gntxtMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gntxtMatKhau.DefaultText = "";
+            this.gntxtMatKhau.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.gntxtMatKhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.gntxtMatKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.gntxtMatKhau.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.gntxtMatKhau.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gntxtMatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gntxtMatKhau.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gntxtMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.gntxtMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.gntxtMatKhau.Location = new System.Drawing.Point(22, 190);
+            this.gntxtMatKhau.Name = "gntxtMatKhau";
+            this.gntxtMatKhau.PasswordChar = '●';
+            this.gntxtMatKhau.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.gntxtMatKhau.PlaceholderText = "";
+            this.gntxtMatKhau.SelectedText = "";
+            this.gntxtMatKhau.Size = new System.Drawing.Size(228, 26);
+            this.gntxtMatKhau.TabIndex = 2;
+            this.gntxtMatKhau.UseSystemPasswordChar = true;
             // 
-            // tlsbtnTenDangNhap
+            // guna2ToggleSwitchLuuThongTin
             // 
-            this.tlsbtnTenDangNhap.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tlsbtnTenDangNhap.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.tlsbtnTenDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("tlsbtnTenDangNhap.Image")));
-            this.tlsbtnTenDangNhap.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tlsbtnTenDangNhap.Name = "tlsbtnTenDangNhap";
-            this.tlsbtnTenDangNhap.Size = new System.Drawing.Size(34, 28);
-            // 
-            // btnDangNhap
-            // 
-            this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.Location = new System.Drawing.Point(14, 352);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(346, 78);
-            this.btnDangNhap.TabIndex = 2;
-            this.btnDangNhap.Text = "Đăng nhập";
-            this.btnDangNhap.UseVisualStyleBackColor = true;
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
-            // 
-            // lblTieuDe
-            // 
-            this.lblTieuDe.AutoSize = true;
-            this.lblTieuDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.lblTieuDe.Location = new System.Drawing.Point(18, 122);
-            this.lblTieuDe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTieuDe.Name = "lblTieuDe";
-            this.lblTieuDe.Size = new System.Drawing.Size(227, 36);
-            this.lblTieuDe.TabIndex = 1;
-            this.lblTieuDe.Text = "  Cổng thông tin";
-            this.lblTieuDe.Click += new System.EventHandler(this.lblTieuDe_Click);
+            this.guna2ToggleSwitchLuuThongTin.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ToggleSwitchLuuThongTin.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ToggleSwitchLuuThongTin.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.guna2ToggleSwitchLuuThongTin.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.guna2ToggleSwitchLuuThongTin.Location = new System.Drawing.Point(22, 222);
+            this.guna2ToggleSwitchLuuThongTin.Name = "guna2ToggleSwitchLuuThongTin";
+            this.guna2ToggleSwitchLuuThongTin.Size = new System.Drawing.Size(30, 18);
+            this.guna2ToggleSwitchLuuThongTin.TabIndex = 3;
+            this.guna2ToggleSwitchLuuThongTin.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2ToggleSwitchLuuThongTin.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2ToggleSwitchLuuThongTin.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.guna2ToggleSwitchLuuThongTin.UncheckedState.InnerColor = System.Drawing.Color.White;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label1.Location = new System.Drawing.Point(58, 160);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(58, 227);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 36);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "  dịch vụ";
-            this.label1.Click += new System.EventHandler(this.lblTieuDe_Click);
+            this.label1.Size = new System.Drawing.Size(80, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Lưu đăng nhập";
             // 
-            // ptbQC
+            // linkLabel1
             // 
-            this.ptbQC.Image = ((System.Drawing.Image)(resources.GetObject("ptbQC.Image")));
-            this.ptbQC.Location = new System.Drawing.Point(24, 228);
-            this.ptbQC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ptbQC.Name = "ptbQC";
-            this.ptbQC.Size = new System.Drawing.Size(216, 291);
-            this.ptbQC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbQC.TabIndex = 3;
-            this.ptbQC.TabStop = false;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(164, 227);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(86, 13);
+            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Quên mật khẩu?";
             // 
-            // ptbLogo
+            // gnbtnDangNhap
             // 
-            this.ptbLogo.Image = ((System.Drawing.Image)(resources.GetObject("ptbLogo.Image")));
-            this.ptbLogo.Location = new System.Drawing.Point(-6, -15);
-            this.ptbLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ptbLogo.Name = "ptbLogo";
-            this.ptbLogo.Size = new System.Drawing.Size(114, 108);
-            this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbLogo.TabIndex = 4;
-            this.ptbLogo.TabStop = false;
+            this.gnbtnDangNhap.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.gnbtnDangNhap.BorderRadius = 6;
+            this.gnbtnDangNhap.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.gnbtnDangNhap.BorderThickness = 2;
+            this.gnbtnDangNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.gnbtnDangNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.gnbtnDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.gnbtnDangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.gnbtnDangNhap.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gnbtnDangNhap.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gnbtnDangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.gnbtnDangNhap.Location = new System.Drawing.Point(22, 265);
+            this.gnbtnDangNhap.Name = "gnbtnDangNhap";
+            this.gnbtnDangNhap.Size = new System.Drawing.Size(87, 22);
+            this.gnbtnDangNhap.TabIndex = 6;
+            this.gnbtnDangNhap.Text = "Đăng nhập";
+            this.gnbtnDangNhap.Click += new System.EventHandler(this.gnbtnDangNhap_Click);
             // 
-            // label2
+            // gnbtnThoat
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label2.Location = new System.Drawing.Point(114, 14);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(267, 29);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Phòng khám nha khoa";
+            this.gnbtnThoat.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.gnbtnThoat.BorderRadius = 6;
+            this.gnbtnThoat.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.gnbtnThoat.BorderThickness = 2;
+            this.gnbtnThoat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.gnbtnThoat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.gnbtnThoat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.gnbtnThoat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.gnbtnThoat.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gnbtnThoat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gnbtnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.gnbtnThoat.Location = new System.Drawing.Point(156, 265);
+            this.gnbtnThoat.Name = "gnbtnThoat";
+            this.gnbtnThoat.Size = new System.Drawing.Size(94, 22);
+            this.gnbtnThoat.TabIndex = 6;
+            this.gnbtnThoat.Text = "Thoát";
+            this.gnbtnThoat.Click += new System.EventHandler(this.gnbtnThoat_Click);
             // 
             // frmDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 572);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.ptbLogo);
-            this.Controls.Add(this.ptbQC);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblTieuDe);
-            this.Controls.Add(this.grbDangNhap);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ClientSize = new System.Drawing.Size(653, 376);
+            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.guna2Panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             this.Load += new System.EventHandler(this.frmDangNhap_Load);
-            this.grbDangNhap.ResumeLayout(false);
-            this.grbDangNhap.PerformLayout();
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbQC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            this.guna2Panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox grbDangNhap;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.Button btnDangNhap;
-        private System.Windows.Forms.ToolStripTextBox tolstxtTenDangNhap;
-        private System.Windows.Forms.ToolStripButton tlsbtnTenDangNhap;
-        private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripTextBox tolstxtMatMa;
-        private System.Windows.Forms.ToolStripButton tolsbtnMatMa;
-        private System.Windows.Forms.Label lblMatKhau;
-        private System.Windows.Forms.Label lblTaiKhoan;
-        private System.Windows.Forms.Label lblTieuDe;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2Button gnbtnThoat;
+        private Guna.UI2.WinForms.Guna2Button gnbtnDangNhap;
+        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox ptbQC;
-        private System.Windows.Forms.PictureBox ptbLogo;
-        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitchLuuThongTin;
+        private Guna.UI2.WinForms.Guna2TextBox gntxtMatKhau;
+        private Guna.UI2.WinForms.Guna2TextBox gntxtTaiKhoan;
     }
 }
 
