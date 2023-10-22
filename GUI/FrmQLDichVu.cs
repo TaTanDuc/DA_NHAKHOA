@@ -125,6 +125,8 @@ namespace GUI
                     selectedRow = gndgvDSDieuTri.Rows.Add();
                     insertUpdate(selectedRow);
                 }
+               
+
               //  LoadList();
                 Refresh();
                 /*    var treatment = new Treatment()
