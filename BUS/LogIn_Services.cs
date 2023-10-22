@@ -14,14 +14,11 @@ namespace BUS
         {
             using (var context = new NhaKhoaDB())
             {
-                var tempUser = context.LogIns.FirstOrDefault(l => l.StaffID == ID);
-                var tempPass = context.LogIns.FirstOrDefault(l => l.Password == Pass);
-                if (tempUser != null && tempPass != null)
+                var temp = context.LogIns.FirstOrDefault(l => l.StaffID == ID && l.Password == Pass);
+                if (temp != null)
                     return 1;
-                else if (tempUser != null && tempPass == null)
-                    return 0;
                 else
-                    return -1;
+                    return 0;
             }
         }
 

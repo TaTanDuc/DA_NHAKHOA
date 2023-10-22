@@ -40,16 +40,10 @@ namespace GUI
             switch (temp)
             {
                 case 1:
-                    FrmTrangChu frmTrangChu = new FrmTrangChu();
-                    frmTrangChu.ShowDialog();
-                    this.Hide();
+                    this.DialogResult = DialogResult.OK;
                     break;
                 case 0:
-                    MessageBox.Show("Sai mật khẩu!", "Lỗi");
-                    tolstxtTenDangNhap.Focus();
-                    break;
-                case -1:
-                    MessageBox.Show("Sai tài khoản!", "Lỗi");
+                    MessageBox.Show("Sai thông tinn đăng nhập!", "Lỗi");
                     tolstxtTenDangNhap.Focus();
                     break;
             }

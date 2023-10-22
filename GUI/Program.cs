@@ -16,7 +16,14 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmQLBenhNhan());
+
+            //frmDangNhap dangNhap = new frmDangNhap();
+
+            //if (dangNhap.ShowDialog() == DialogResult.OK)
+            //{
+                Application.Run(new frmTrangChu_new());
+            //   dangNhap.Close();
+            //}
         }
     }
 }
