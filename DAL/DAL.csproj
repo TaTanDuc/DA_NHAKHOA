@@ -71,6 +71,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\Premium Vector _ Dental clinic logo design vector.jpg" />
+    <Content Include="Image\snapedit_1697880802158.png" />
+    <Content Include="Image\snapedit_1697899397351.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
