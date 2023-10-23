@@ -22,10 +22,14 @@ namespace DAL.Entities
         [Column(TypeName = "date")]
         public DateTime? AppointmentDate { get; set; }
 
+        public int? StatusID { get; set; }
+
         public virtual Customer Customer { get; set; }
 
         public virtual ExamDetail ExamDetail { get; set; }
 
         public virtual Staff Staff { get; set; }
+
+        public virtual Status Status { get; set; }
     }
 }
