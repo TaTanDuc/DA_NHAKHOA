@@ -79,6 +79,7 @@
     <Content Include="Image\Premium Vector _ Dental clinic logo design vector.jpg" />
     <Content Include="Image\snapedit_1697880802158.png" />
     <Content Include="Image\snapedit_1697899397351.png" />
+    <Content Include="Image\snapedit_1697993603939.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

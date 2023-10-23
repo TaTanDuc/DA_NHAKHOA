@@ -77,6 +77,12 @@
     <Compile Include="frmHoaDon.designer.cs">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPhieuNX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhieuNX.Designer.cs">
+      <DependentUpon>frmPhieuNX.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQLBenhNhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,18 @@
     </Compile>
     <Compile Include="frmQLNhanVien.Designer.cs">
       <DependentUpon>frmQLNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLVatLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLVatLieu.Designer.cs">
+      <DependentUpon>frmQLVatLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemVatLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemVatLieu.Designer.cs">
+      <DependentUpon>frmThemVatLieu.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTrangChu.cs">
       <SubType>Form</SubType>
@@ -115,6 +133,9 @@
     <EmbeddedResource Include="frmHoaDon.resx">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPhieuNX.resx">
+      <DependentUpon>frmPhieuNX.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQLBenhNhan.resx">
       <DependentUpon>frmQLBenhNhan.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +144,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLNhanVien.resx">
       <DependentUpon>frmQLNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLVatLieu.resx">
+      <DependentUpon>frmQLVatLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemVatLieu.resx">
+      <DependentUpon>frmThemVatLieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTrangChu.resx">
       <DependentUpon>FrmTrangChu.cs</DependentUpon>
@@ -138,6 +165,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -162,6 +190,12 @@
       <Project>{81616ed0-74ff-4746-bbbc-1bb60e358eb9}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dental-tool-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snapedit_1697993603939.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

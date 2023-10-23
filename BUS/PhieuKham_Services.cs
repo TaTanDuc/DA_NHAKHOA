@@ -12,7 +12,7 @@ namespace BUS
         public List<ExamTicket> GetAll()
         {
             var context = new NhaKhoaDB();
-            var list = context.ExamTickets.Select(t => new { FullName = t.Customer.FullName, BDay = t.Customer.BirthDay, SDT = t.Customer.Phone, ApDate = t.AppointmentDate }).ToList();
+          //  var list = context.ExamTickets.Select(t => new { FullName = t.Customer.FullName, BDay = t.Customer.BirthDay, SDT = t.Customer.Phone, ApDate = t.AppointmentDate }).ToList();
             return context.ExamTickets.ToList();
         }
     }
