@@ -51,5 +51,11 @@ namespace GUI
                 Application.Exit();
             }
         }
+
+        private void btnquanLyDichVu_Click(object sender, EventArgs e)
+        {
+            FrmQLDichVu nv = new FrmQLDichVu();
+            nv.ShowDialog();
+        }
     }
 }
