@@ -56,7 +56,6 @@ namespace GUI
             }
         }
 
-<<<<<<< HEAD
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -69,12 +68,11 @@ namespace GUI
             lichKham.ShowDialog();
             lichKham.Dispose();
             this.Show();
-=======
+        }
         private void btnquanLyDichVu_Click(object sender, EventArgs e)
         {
             FrmQLDichVu nv = new FrmQLDichVu();
             nv.ShowDialog();
->>>>>>> 810a416bec068367faf13dca029641ea83405b73
         }
     }
 }
