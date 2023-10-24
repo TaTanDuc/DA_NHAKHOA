@@ -60,15 +60,26 @@ namespace GUI
         private void gnbtnThemMoi_Click(object sender, EventArgs e)
         {
             frmPhieuNX FrmPhieuNX = new frmPhieuNX();
+            this.Hide();
             FrmPhieuNX.ShowDialog();
-            this.Close();
+            this.Show();
         }
 
+        public string id, content, unit, price;
+        public int flag;
+        private void LoadList()
+        {
+            List<ToolAndMaterial> tol = new List<ToolAndMaterial>();
+            tol = vatLieu_Service.GetAll();
+            BindGrid(tol);
+        }
         private void gnbtnQLDungCu_Click(object sender, EventArgs e)
         {
             frmThemVatLieu FrmThemVatLieu = new frmThemVatLieu();
+            this.Hide();
             FrmThemVatLieu.ShowDialog();
-            this.Close();
+            LoadList();
+            this.Show();
         }
     }
 }

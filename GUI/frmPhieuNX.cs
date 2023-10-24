@@ -48,10 +48,9 @@ namespace GUI
 
         private void FillCmbListTool(List<ToolAndMaterial> tol)
         {
-            tol.Insert(0, new ToolAndMaterial());
-            this.gncmbTenThietBi.DataSource = tol;
-            this.gncmbTenThietBi.DisplayMember = "Content";
-            this.gncmbTenThietBi.ValueMember = "TaM_ID";
+            gncmbTenThietBi.DataSource = tol;
+            gncmbTenThietBi.DisplayMember = "Content";
+            gncmbTenThietBi.ValueMember = "TaM_ID";
         }
 
         private void BindGrid(List<ImportExportTicket> importExportTickets)
@@ -72,8 +71,6 @@ namespace GUI
 
         private void gnbtnThoat_Click(object sender, EventArgs e)
         {
-            frmQLVatLieu FrmQLVatLieu = new frmQLVatLieu();
-            FrmQLVatLieu.ShowDialog();
             this.Close();
         }
 
@@ -128,25 +125,91 @@ namespace GUI
                     if (gntxtMa.Text == gndgvNhapXuat.Rows[i.Index].Cells[0].Value.ToString())
                         throw new Exception("ID đã tồn tại");
                 }
-                
+
                 var item = new ImportExportTicket()
                 {
-                   IETicketID = Convert.ToInt32(gntxtMa.Text),
-                   TaM_ID = Convert.ToInt32(gncmbTenThietBi.Text),
-                   IorE = gncmbTrangThai.Text,
-                   IEDate = gndateNgay.Value,
-                   Quantity = Convert.ToInt32(gntxtSL.Text),
-                   Total = Convert.ToInt64(gntxtGia.Text)
+                    IETicketID = Convert.ToInt32(gntxtMa.Text),
+                    TaM_ID = int.Parse(gncmbTenThietBi.SelectedValue.ToString()),
+                    IorE = gncmbTrangThai.Text,
+                    IEDate = gndateNgay.Value,
+                    Quantity = Convert.ToInt32(gntxtSL.Text),
+                    Total = Convert.ToInt64(gntxtGia.Text)
 
                 };
                 vatLieu_Service.AddTicket(item);
                 LoadList();
                 MessageBox.Show("Thêm mới dữ liệu thành công", "Thông báo", MessageBoxButtons.OK);
-                Refresh();
+                fresh();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK);
+            }
+        }
+
+        private int getSelectedRow(string ID)
+        {
+            for (int i = 0; i < gndgvNhapXuat.Rows.Count; i++)
+            {
+                if (gndgvNhapXuat.Rows[i].Cells[0].Value.ToString() == ID)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        private void gnbtnSua_Click(object sender, EventArgs e)
+        {
+            int selectedRow = getSelectedRow(gntxtMa.Text);
+            if (selectedRow != -1)
+            {
+                var item = new ImportExportTicket()
+                {
+                    IETicketID = Convert.ToInt32(gntxtMa.Text),
+                    TaM_ID = int.Parse(gncmbTenThietBi.SelectedValue.ToString()),
+                    IorE = gncmbTrangThai.Text,
+                    IEDate = gndateNgay.Value,
+                    Quantity = Convert.ToInt32(gntxtSL.Text),
+                    Total = Convert.ToInt64(gntxtGia.Text)
+
+                };
+                vatLieu_Service.addOrUpdateIMP(item);
+                LoadList();
+                fresh();
+                MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
+
+        private void gnbtnXoa_Click(object sender, EventArgs e)
+        {
+            var context = new NhaKhoaDB();
+            try
+            {
+                int id = Convert.ToInt32(gntxtMa.Text);
+                ImportExportTicket dbDelete = context.ImportExportTickets.FirstOrDefault(p => p.IETicketID == id);
+                if (dbDelete != null)
+                {
+                    DialogResult d = MessageBox.Show("Bạn có muốn xóa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (d == DialogResult.Yes)
+                    {
+                        context.ImportExportTickets.Remove(dbDelete);
+                        context.SaveChanges();
+                        LoadList();
+                        MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK);
+                    }
+                }
+                else
+                    throw new Exception("Lỗi");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo");
             }
         }
     }
