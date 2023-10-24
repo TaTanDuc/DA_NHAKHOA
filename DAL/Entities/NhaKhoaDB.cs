@@ -11,7 +11,7 @@ namespace DAL.Entities
             : base("name=NhaKhoaDB")
         {
         }
-
+        
         public virtual DbSet<Bill> Bills { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Diagnose> Diagnoses { get; set; }

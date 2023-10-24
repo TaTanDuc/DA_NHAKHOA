@@ -1,15 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using DAL.Entities;
+using Microsoft.SqlServer.Server;
 
 namespace BUS
 {
     public class PhieuKham_Services
     {
+        private readonly BenhNhanServices benhNhanServices = new BenhNhanServices();
         public List<ExamTicket> GetAll()
         {
             var context = new NhaKhoaDB();
@@ -27,6 +31,15 @@ namespace BUS
             var context = new NhaKhoaDB();
             var date = DateTime.Now;
             return context.ExamTickets.Where(t => t.AppointmentDate == date).ToList();
+        }
+
+        public void SaveDetails(string CID, DateTime ApD , int d, int tr, int q, int t)
+        {
+            var context = new NhaKhoaDB();
+            var count = context.ExamTickets.Count();
+            context.ExamTickets.Add(new ExamTicket { TicketID = count + 1 ,CustomerID = CID , AppointmentDate = ApD , StatusID = 0});
+            context.ExamDetails.Add(new ExamDetail { TicketID = count + 1 ,DiagnoseID = d , TreatmentID = tr, Quantity = q , Total = t});
+            context.SaveChanges();
         }
     }
 }

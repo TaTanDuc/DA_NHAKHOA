@@ -26,6 +26,14 @@ namespace BUS
             }
         }
 
+        public Customer FindByID(string ID) 
+        {
+            using (var context = new NhaKhoaDB())
+            {
+                return context.Customers.FirstOrDefault(p => p.CustomerID == ID);
+            }
+        }
+
         public void addOrUpdate(Customer c)
         {
             using (var context = new NhaKhoaDB())
@@ -44,7 +52,13 @@ namespace BUS
             }
         }
 
-
-
+        public void AddOrUpdateDuc(string CID, string name, string s, DateTime BrD, string sdt)
+        {
+            using (var context = new NhaKhoaDB())
+            {
+                context.Customers.AddOrUpdate(new Customer { CustomerID = CID , FullName = name , Sex = s, BirthDay = BrD, Phone = sdt});
+                context.SaveChanges();
+            }
+        }
     }
 }

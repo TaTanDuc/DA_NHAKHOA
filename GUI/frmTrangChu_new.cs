@@ -44,16 +44,15 @@ namespace GUI
         private void btnquanLyNhanVien_Click(object sender, EventArgs e)
         {
             frmQLNhanVien nv = new frmQLNhanVien();
+            this.Hide();
             nv.ShowDialog();
+            nv.Dispose();
+            this.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            DialogResult d = MessageBox.Show("Đăng xuất?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (d == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+            this.DialogResult = DialogResult.OK;
         }
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -73,6 +72,15 @@ namespace GUI
         {
             FrmQLDichVu nv = new FrmQLDichVu();
             nv.ShowDialog();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            frmNoiDungKham frmNoiDungKham = new frmNoiDungKham();
+            this.Hide();
+            frmNoiDungKham.ShowDialog();
+            frmNoiDungKham.Dispose();
+            this.Show();
         }
     }
 }

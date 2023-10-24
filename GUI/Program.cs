@@ -19,23 +19,11 @@ namespace GUI
             Application.SetCompatibleTextRenderingDefault(false);
 
             frmDangNhap dangNhap = new frmDangNhap();
-<<<<<<< HEAD
-            frmTrangChu_new trangChu_New = new frmTrangChu_new();
-
             if (dangNhap.ShowDialog() == DialogResult.OK)
             {
-                Application.Run(trangChu_New);
+                Application.Run(new frmTrangChu_new());
                 dangNhap.Close();
             }
-=======
-            Application.Run(new frmDieuTri());
-            //if (dangNhap.ShowDialog() == DialogResult.OK)
-            //{
-            //    Application.Run(new frmTrangChu_new());
-            //    dangNhap.Close();
-            //}
-           
->>>>>>> 810a416bec068367faf13dca029641ea83405b73
         }
     }
 }

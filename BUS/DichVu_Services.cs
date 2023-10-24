@@ -20,8 +20,7 @@ namespace BUS
         public List<Diagnose> GetAllDiagnose()
         {
              var context = new NhaKhoaDB();
-            
-                return context.Diagnoses.ToList();
+             return context.Diagnoses.OrderBy(d => d.DiagnoseID).ToList();
            
         }
 
@@ -55,11 +54,24 @@ namespace BUS
         public void removeTreatment(Treatment t)
         {
             var context = new NhaKhoaDB();
-           
-              context.Treatments.Remove(t);
-              context.SaveChanges();
-            
+            context.Treatments.Remove(t);
+            context.SaveChanges();
+        }            
+        
+        public List<Treatment> GetTrD(int i)
+        {
+            using (var context = new NhaKhoaDB())
+            {
+                return context.Treatments.Where(t => t.DiagnoseID == i).OrderBy(t => t.TreatmentID).ToList();
+            }
         }
 
+        public Treatment GetPrice(int i1, int i2)
+        {
+            using (var context = new NhaKhoaDB())
+            {
+                return context.Treatments.FirstOrDefault(t => t.DiagnoseID == i1 && t.TreatmentID == i2);
+            }
+        }
     }
 }
