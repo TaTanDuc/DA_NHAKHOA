@@ -79,5 +79,10 @@ namespace GUI
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void toolStripLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

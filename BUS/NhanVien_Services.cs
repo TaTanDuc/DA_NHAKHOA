@@ -10,39 +10,49 @@ namespace BUS
 {
     public class NhanVien_Services
     {
-        public List<Staff> GetAll()
+        public List<Staff> GetAllStaff()
         {
-            using (var context = new NhaKhoaDB())
-            {
-                return context.Staffs.ToList();
-            }
+            var context = new NhaKhoaDB();
+            return context.Staffs.ToList();
+        }
+
+        public List<LogIn> GetAllLogIn()
+        {
+            var context = new NhaKhoaDB();          
+            return context.LogIns.ToList();           
         }
 
         public List<Staff> Find(string find)
         {
-            using (var context = new NhaKhoaDB())
-            {
+            var context = new NhaKhoaDB();
+            
                 return context.Staffs.Where(p => p.StaffID == find || p.FullName == find).ToList();
-            }
+            
         }
 
         public void addOrUpdate(Staff s)
         {
-            using (var context = new NhaKhoaDB())
-            {
-                context.Staffs.AddOrUpdate(s);
-                context.SaveChanges();
-            }
+            var context = new NhaKhoaDB();
+            context.Staffs.AddOrUpdate(s);
+            context.SaveChanges();
+           
+        }
+        public void addStaff(Staff s)
+        {
+            var context = new NhaKhoaDB();                
+            context.Staffs.Add(s);
+            context.SaveChanges();
+          
         }
 
         public void remove(Staff s)
         {
-            using (var context = new NhaKhoaDB())
-            {
-                context.Staffs.Remove(s);
-                context.SaveChanges();
-            }
+            var context = new NhaKhoaDB();          
+            context.Staffs.Remove(s);
+            context.SaveChanges();          
         }
+
+
 
     }
 }

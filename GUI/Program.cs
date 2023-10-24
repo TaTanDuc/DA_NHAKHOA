@@ -21,8 +21,8 @@ namespace GUI
             frmDangNhap dangNhap = new frmDangNhap();
             if (dangNhap.ShowDialog() == DialogResult.OK)
             {
-                Application.Run(new frmTrangChu_new());
-                dangNhap.Close();
+                Application.Run(new frmQLNhanVien_new());
+                
             }
         }
     }
