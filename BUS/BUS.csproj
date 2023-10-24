@@ -57,12 +57,9 @@
     <Compile Include="Security_Services.cs" />
     <Compile Include="NhanVien_Services.cs" />
     <Compile Include="PhieuKham_Services.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
     <Compile Include="VatLieu_Service.cs" />
-=======
     <Compile Include="Status_Services.cs" />
->>>>>>> 4208c02807bcb99619b007c4c1f1660ef7b75f18
+<Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
