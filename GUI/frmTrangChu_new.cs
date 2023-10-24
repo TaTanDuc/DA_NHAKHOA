@@ -43,7 +43,7 @@ namespace GUI
 
         private void btnquanLyNhanVien_Click(object sender, EventArgs e)
         {
-            frmql = new frmQLNhanVien();
+            frmQLNhanVien nv = new frmQLNhanVien();
             this.Hide();
             nv.ShowDialog();
             nv.Dispose();
