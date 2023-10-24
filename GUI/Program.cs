@@ -23,7 +23,7 @@ namespace GUI
             {
                 Application.Run(new frmTrangChu_new());
                 dangNhap.Close();
-            }           
+            }
         }
     }
 }

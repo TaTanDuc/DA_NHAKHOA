@@ -70,8 +70,11 @@ namespace GUI
         }
         private void btnquanLyDichVu_Click(object sender, EventArgs e)
         {
-            FrmQLDichVu nv = new FrmQLDichVu();
-            nv.ShowDialog();
+            frmQLNhanVien_new qLNhanVien_New = new frmQLNhanVien_new();
+            this.Hide();
+            qLNhanVien_New.ShowDialog();
+            qLNhanVien_New.Dispose();
+            this.Show();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

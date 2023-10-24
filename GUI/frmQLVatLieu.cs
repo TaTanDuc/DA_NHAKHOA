@@ -22,9 +22,6 @@ namespace GUI
 
         private void gnbtnThoat_Click(object sender, EventArgs e)
         {
-            
-            frmTrangChu_new FrmTrangChu_New = new frmTrangChu_new();
-            FrmTrangChu_New.ShowDialog();
             this.Close();
         }
 
