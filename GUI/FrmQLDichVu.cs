@@ -125,31 +125,9 @@ namespace GUI
                     selectedRow = gndgvDSDieuTri.Rows.Add();
                     insertUpdate(selectedRow);
                 }
-               
-
-              //  LoadList();
-                Refresh();
-                /*    var treatment = new Treatment()
-                {
-                    TreatmentID = Convert.ToInt32(gntxtMa.Text),
-                    TreatmentContent = gntxtNoiDung.Text,
-                    Unit = gntxtDVT.Text,
-                    UnitPrice = Convert.ToInt32(gntxtDonGia.Text)
-
-                };
-                dichVu_Services.addOrUpdateTreatment(treatment);
-
-                var diagnose = new Diagnose()
-                {
-                    DiagnoseID = Convert.ToInt32(gntxtMaChuanDoan.Text),
-                    DiagnosticContent = gntxtChuanDoan.Text
-                };
-
-                dichVu_Services.addOrUpdateDiagnose(diagnose);
                 LoadList();
-                MessageBox.Show("Thêm mới dữ liệu thành công", "Thông báo", MessageBoxButtons.OK);
                 Refresh();
-                */
+              
             }
             catch (Exception ex)
             {
