@@ -102,24 +102,6 @@
     <Compile Include="frmNoiDungKham.Designer.cs">
       <DependentUpon>frmNoiDungKham.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQLBenhNhan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmQLBenhNhan.Designer.cs">
-      <DependentUpon>frmQLBenhNhan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmQLDichVu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmQLDichVu.designer.cs">
-      <DependentUpon>FrmQLDichVu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmQLNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmQLNhanVien.Designer.cs">
-      <DependentUpon>frmQLNhanVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmQLNhanVien_new.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,12 +119,6 @@
     </Compile>
     <Compile Include="frmThemVatLieu.Designer.cs">
       <DependentUpon>frmThemVatLieu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmTrangChu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmTrangChu.designer.cs">
-      <DependentUpon>FrmTrangChu.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTrangChu_new.cs">
       <SubType>Form</SubType>
@@ -170,23 +146,14 @@
     <EmbeddedResource Include="frmNoiDungKham.resx">
       <DependentUpon>frmNoiDungKham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQLBenhNhan.resx">
-      <DependentUpon>frmQLBenhNhan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmQLDichVu.resx">
-      <DependentUpon>FrmQLDichVu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmQLNhanVien.resx">
-      <DependentUpon>frmQLNhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="frmQLNhanVien_new.resx">
+      <DependentUpon>frmQLNhanVien_new.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLVatLieu.resx">
       <DependentUpon>frmQLVatLieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThemVatLieu.resx">
       <DependentUpon>frmThemVatLieu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmTrangChu.resx">
-      <DependentUpon>FrmTrangChu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrangChu_new.resx">
       <DependentUpon>frmTrangChu_new.cs</DependentUpon>
