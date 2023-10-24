@@ -51,6 +51,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -65,11 +66,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmLichKham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLichKham.Designer.cs">
+      <DependentUpon>frmLichKham.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDieuTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDieuTri.Designer.cs">
+      <DependentUpon>frmDieuTri.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHoaDon.cs">
       <SubType>Form</SubType>
@@ -77,11 +90,19 @@
     <Compile Include="frmHoaDon.designer.cs">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="frmPhieuNX.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPhieuNX.Designer.cs">
       <DependentUpon>frmPhieuNX.cs</DependentUpon>
+=======
+    <Compile Include="frmNoiDungKham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNoiDungKham.Designer.cs">
+      <DependentUpon>frmNoiDungKham.cs</DependentUpon>
+>>>>>>> 4208c02807bcb99619b007c4c1f1660ef7b75f18
     </Compile>
     <Compile Include="frmQLBenhNhan.cs">
       <SubType>Form</SubType>
@@ -127,14 +148,25 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmLichKham.resx">
+      <DependentUpon>frmLichKham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDieuTri.resx">
+      <DependentUpon>frmDieuTri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHoaDon.resx">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="frmPhieuNX.resx">
       <DependentUpon>frmPhieuNX.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="frmNoiDungKham.resx">
+      <DependentUpon>frmNoiDungKham.cs</DependentUpon>
+>>>>>>> 4208c02807bcb99619b007c4c1f1660ef7b75f18
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLBenhNhan.resx">
       <DependentUpon>frmQLBenhNhan.cs</DependentUpon>

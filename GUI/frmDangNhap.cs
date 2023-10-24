@@ -13,7 +13,7 @@ namespace GUI
 {
     public partial class frmDangNhap : Form
     {
-        private readonly LogIn_Services logIn_Services = new LogIn_Services();
+        private readonly Security_Services logIn_Services = new Security_Services();
         public frmDangNhap()
         {
             InitializeComponent();
@@ -66,6 +66,11 @@ namespace GUI
             {
                 Application.Exit();
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }

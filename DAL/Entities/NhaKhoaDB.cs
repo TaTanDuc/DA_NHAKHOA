@@ -8,10 +8,10 @@ namespace DAL.Entities
     public partial class NhaKhoaDB : DbContext
     {
         public NhaKhoaDB()
-            : base("name=NhaKhoa")
+            : base("name=NhaKhoaDB")
         {
         }
-
+        
         public virtual DbSet<Bill> Bills { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Diagnose> Diagnoses { get; set; }
@@ -21,6 +21,7 @@ namespace DAL.Entities
         public virtual DbSet<LogIn> LogIns { get; set; }
         public virtual DbSet<Prescription> Prescriptions { get; set; }
         public virtual DbSet<Staff> Staffs { get; set; }
+        public virtual DbSet<Status> Status { get; set; }
         public virtual DbSet<ToolAndMaterial> ToolAndMaterials { get; set; }
         public virtual DbSet<Treatment> Treatments { get; set; }
 

@@ -8,7 +8,7 @@ using DAL.Entities;
 
 namespace BUS
 {
-    public class LogIn_Services
+    public class Security_Services
     {
         public int LogIn(string ID,string Pass)
         {

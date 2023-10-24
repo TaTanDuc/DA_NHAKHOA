@@ -238,5 +238,10 @@ namespace GUI
                 gntxtDonGia.Text = gia;
             }
         }
+
+        private void gndgvDSDieuTri_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

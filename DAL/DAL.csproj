@@ -63,6 +63,7 @@
     <Compile Include="Entities\NhaKhoaDB.cs" />
     <Compile Include="Entities\Prescription.cs" />
     <Compile Include="Entities\Staff.cs" />
+    <Compile Include="Entities\Status.cs" />
     <Compile Include="Entities\ToolAndMaterial.cs" />
     <Compile Include="Entities\Treatment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

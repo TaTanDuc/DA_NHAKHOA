@@ -14,11 +14,12 @@ namespace GUI
     public partial class frmTrangChu_new : Form
     {
         private readonly PhieuKham_Services phieuKham_Services = new PhieuKham_Services();
+        
         public frmTrangChu_new()
         {
             InitializeComponent();
         }
-
+        
         private void guna2ControlBox2_Click(object sender, EventArgs e)
         {
 
@@ -26,12 +27,15 @@ namespace GUI
 
         private void frmTrangChu_new_Load(object sender, EventArgs e)
         {
-            foreach(var item in phieuKham_Services.GetAll())
+            foreach(var item in phieuKham_Services.GetToday())
             {
                 var index = guna2DataGridView1.Rows.Add();
                 guna2DataGridView1.Rows[index].Cells[1].Value = item.Customer.FullName;
                 guna2DataGridView1.Rows[index].Cells[2].Value = item.Customer.BirthDay;
-                guna2DataGridView1.Rows[index].Cells[3].Value = item.AppointmentDate;
+                guna2DataGridView1.Rows[index].Cells[3].Value = item.Customer.Phone;
+                guna2DataGridView1.Rows[index].Cells[4].Value = item.AppointmentDate;
+                guna2DataGridView1.Rows[index].Cells[5].Value = item.Status.StatusName;
+
             }
         }
 
@@ -40,16 +44,43 @@ namespace GUI
         private void btnquanLyNhanVien_Click(object sender, EventArgs e)
         {
             frmQLNhanVien nv = new frmQLNhanVien();
+            this.Hide();
             nv.ShowDialog();
+            nv.Dispose();
+            this.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            DialogResult d = MessageBox.Show("Thoát chương trình", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (d == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+            this.DialogResult = DialogResult.OK;
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            frmLichKham lichKham = new frmLichKham();
+            this.Hide();
+            lichKham.ShowDialog();
+            lichKham.Dispose();
+            this.Show();
+        }
+        private void btnquanLyDichVu_Click(object sender, EventArgs e)
+        {
+            FrmQLDichVu nv = new FrmQLDichVu();
+            nv.ShowDialog();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            frmNoiDungKham frmNoiDungKham = new frmNoiDungKham();
+            this.Hide();
+            frmNoiDungKham.ShowDialog();
+            frmNoiDungKham.Dispose();
+            this.Show();
         }
     }
 }

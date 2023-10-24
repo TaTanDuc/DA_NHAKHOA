@@ -125,6 +125,7 @@
             this.linkLabel1.TabIndex = 5;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Quên mật khẩu?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label1
             // 
@@ -169,6 +170,7 @@
             this.gntxtMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
             this.gntxtMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gntxtMatKhau.Location = new System.Drawing.Point(22, 190);
+            this.gntxtMatKhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gntxtMatKhau.Name = "gntxtMatKhau";
             this.gntxtMatKhau.PasswordChar = '●';
             this.gntxtMatKhau.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
@@ -197,6 +199,7 @@
             this.gntxtTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
             this.gntxtTaiKhoan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.gntxtTaiKhoan.Location = new System.Drawing.Point(22, 158);
+            this.gntxtTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gntxtTaiKhoan.Name = "gntxtTaiKhoan";
             this.gntxtTaiKhoan.PasswordChar = '\0';
             this.gntxtTaiKhoan.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
