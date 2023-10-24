@@ -43,7 +43,7 @@ namespace GUI
 
         private void btnquanLyNhanVien_Click(object sender, EventArgs e)
         {
-            frmQLNhanVien nv = new frmQLNhanVien();
+            frmQLNhanVien_new nv = new frmQLNhanVien_new();
             this.Hide();
             nv.ShowDialog();
             nv.Dispose();
@@ -70,10 +70,10 @@ namespace GUI
         }
         private void btnquanLyDichVu_Click(object sender, EventArgs e)
         {
-            frmQLNhanVien_new qLNhanVien_New = new frmQLNhanVien_new();
+            frmDieuTri dieuTri = new frmDieuTri();
             this.Hide();
-            qLNhanVien_New.ShowDialog();
-            qLNhanVien_New.Dispose();
+            dieuTri.ShowDialog();
+            dieuTri.Dispose();
             this.Show();
         }
 
