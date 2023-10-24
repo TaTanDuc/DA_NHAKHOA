@@ -43,7 +43,7 @@ namespace GUI
 
         private void btnquanLyNhanVien_Click(object sender, EventArgs e)
         {
-            frmQLNhanVien nv = new frmQLNhanVien();
+            frmql = new frmQLNhanVien();
             this.Hide();
             nv.ShowDialog();
             nv.Dispose();
@@ -80,6 +80,15 @@ namespace GUI
             this.Hide();
             frmNoiDungKham.ShowDialog();
             frmNoiDungKham.Dispose();
+            this.Show();
+        }
+
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+            frmQLVatLieu qLVatLieu = new frmQLVatLieu();
+            this.Hide();
+            qLVatLieu.ShowDialog();
+            qLVatLieu.Dispose();
             this.Show();
         }
     }

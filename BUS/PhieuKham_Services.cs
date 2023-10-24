@@ -16,10 +16,8 @@ namespace BUS
         private readonly BenhNhanServices benhNhanServices = new BenhNhanServices();
         public List<ExamTicket> GetAll()
         {
-            using (var context = new NhaKhoaDB())
-            {
+            var context = new NhaKhoaDB();
             return context.ExamTickets.ToList();
-        }
         }
 
         public List<ExamTicket> Find(string s, DateTime d, int i)

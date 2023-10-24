@@ -41,7 +41,6 @@ namespace GUI
             guna2ComboBox1.DataSource = status_Services.GetAll();
             guna2ComboBox1.ValueMember = "StatusID";
             guna2ComboBox1.DisplayMember = "StatusName";
-
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
