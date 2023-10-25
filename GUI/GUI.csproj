@@ -96,11 +96,11 @@
     <Compile Include="frmPhieuNX.Designer.cs">
       <DependentUpon>frmPhieuNX.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNoiDungKham.cs">
+    <Compile Include="frmTaoLK.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNoiDungKham.Designer.cs">
-      <DependentUpon>frmNoiDungKham.cs</DependentUpon>
+    <Compile Include="frmTaoLK.Designer.cs">
+      <DependentUpon>frmTaoLK.cs</DependentUpon>
     </Compile>
     <Compile Include="frmQLNhanVien_new.cs">
       <SubType>Form</SubType>
@@ -130,6 +130,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLichKham.resx">
       <DependentUpon>frmLichKham.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
@@ -139,12 +140,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHoaDon.resx">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhieuNX.resx">
       <DependentUpon>frmPhieuNX.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNoiDungKham.resx">
-      <DependentUpon>frmNoiDungKham.cs</DependentUpon>
+    <EmbeddedResource Include="frmTaoLK.resx">
+      <DependentUpon>frmTaoLK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLNhanVien_new.resx">
       <DependentUpon>frmQLNhanVien_new.cs</DependentUpon>

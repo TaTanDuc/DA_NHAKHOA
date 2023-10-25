@@ -79,7 +79,7 @@ namespace GUI
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            frmNoiDungKham frmNoiDungKham = new frmNoiDungKham();
+            frmTaoLK frmNoiDungKham = new frmTaoLK();
             this.Hide();
             frmNoiDungKham.ShowDialog();
             frmNoiDungKham.Dispose();

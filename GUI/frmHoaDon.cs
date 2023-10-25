@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DAL.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,44 +14,34 @@ namespace GUI
 {
     public partial class frmHoaDon : Form
     {
-        public frmHoaDon()
+        private readonly HoaDon_Services hoaDon_Services = new HoaDon_Services();
+        private readonly PhieuKham_Services phieuKham_Services = new PhieuKham_Services();
+        Bill bill;
+        public frmHoaDon(int id)
         {
             InitializeComponent();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            this.bill = hoaDon_Services.GetByTID(id);
         }
 
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
+            label3.Text = bill.BillID.ToString();
+            label5.Text = bill.TicketID.ToString();
 
+            label7.Text = bill.ExamDetail.ExamTicket.Customer.FullName;
+            label9.Text = bill.InvoiceDate?.ToString("dd/MM/yyyy");
+
+            label11.Text = $"Chẩn Đoán:{bill.ExamDetail.Treatment.Diagnose.DiagnosticContent}\n" +
+                            $"Điều Trị: {bill.ExamDetail.Treatment.TreatmentContent}\n" +
+                            $"Đơn Giá: {bill.ExamDetail.Treatment.UnitPrice}/{bill.ExamDetail.Treatment.Unit}\n" +
+                            $"Số Lượng: {bill.ExamDetail.Quantity}";
+
+            label13.Text = bill.ExamDetail.Total.ToString();
         }
 
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTinhTien_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

@@ -28,10 +28,11 @@ namespace GUI
             foreach (var item in list)
             {
                 var index = guna2DataGridView1.Rows.Add();
-                guna2DataGridView1.Rows[index].Cells[0].Value = item.Customer.FullName;
-                guna2DataGridView1.Rows[index].Cells[1].Value = item.Customer.Phone;
-                guna2DataGridView1.Rows[index].Cells[2].Value = item.AppointmentDate;
-                guna2DataGridView1.Rows[index].Cells[3].Value = item.Status.StatusName;
+                guna2DataGridView1.Rows[index].Cells[0].Value = item.TicketID;
+                guna2DataGridView1.Rows[index].Cells[1].Value = item.Customer.FullName;
+                guna2DataGridView1.Rows[index].Cells[2].Value = item.Customer.Phone;
+                guna2DataGridView1.Rows[index].Cells[3].Value = item.AppointmentDate;
+                guna2DataGridView1.Rows[index].Cells[4].Value = item.Status.StatusName;
             }
         }
 
@@ -56,6 +57,16 @@ namespace GUI
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void guna2DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = guna2DataGridView1.SelectedCells[0].RowIndex;
+            frmHoaDon frmHoaDon = new frmHoaDon(Convert.ToInt32(guna2DataGridView1.Rows[index].Cells[0].Value));
+            this.Hide();
+            frmHoaDon.ShowDialog();
+            frmHoaDon.Dispose();
+            this.Show();
         }
     }
 }

@@ -41,5 +41,14 @@ namespace BUS
             context.ExamDetails.Add(new ExamDetail { TicketID = count + 1 ,DiagnoseID = d , TreatmentID = tr, Quantity = q , Total = t});
             context.SaveChanges();
         }
+
+        public int GetTicketID()
+        {
+            using (var context = new NhaKhoaDB())
+            {
+                return context.ExamTickets.Count() + 1;
+            }
+        }
+
     }
 }
