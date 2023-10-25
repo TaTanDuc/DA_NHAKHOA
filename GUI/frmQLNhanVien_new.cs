@@ -38,8 +38,6 @@ namespace GUI
                 dgvDSNV.Rows[index].Cells[0].Value = item.StaffID;
                 dgvDSNV.Rows[index].Cells[1].Value = item.FullName;
                 dgvDSNV.Rows[index].Cells[2].Value = item.Phone;
-                //dgvDSNV.Rows[index].Cells[3].Value = item.LogIn.Password;
-
             }
         }
 
