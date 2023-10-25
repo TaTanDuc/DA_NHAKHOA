@@ -78,16 +78,17 @@
             this.guna2Panel1.Controls.Add(this.btnExit);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(76, 600);
+            this.guna2Panel1.Size = new System.Drawing.Size(101, 738);
             this.guna2Panel1.TabIndex = 0;
             // 
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(12, 257);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(16, 316);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(50, 50);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -99,7 +100,8 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 172);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(16, 212);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(50, 50);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -111,7 +113,8 @@
             // 
             this.btnquanLyNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnquanLyNhanVien.Image")));
             this.btnquanLyNhanVien.ImageRotate = 0F;
-            this.btnquanLyNhanVien.Location = new System.Drawing.Point(12, 12);
+            this.btnquanLyNhanVien.Location = new System.Drawing.Point(16, 15);
+            this.btnquanLyNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnquanLyNhanVien.Name = "btnquanLyNhanVien";
             this.btnquanLyNhanVien.Size = new System.Drawing.Size(50, 50);
             this.btnquanLyNhanVien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -124,7 +127,8 @@
             this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(12, 327);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(16, 402);
+            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.Size = new System.Drawing.Size(50, 50);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -135,7 +139,8 @@
             // 
             this.btnquanLyDichVu.Image = ((System.Drawing.Image)(resources.GetObject("btnquanLyDichVu.Image")));
             this.btnquanLyDichVu.ImageRotate = 0F;
-            this.btnquanLyDichVu.Location = new System.Drawing.Point(12, 92);
+            this.btnquanLyDichVu.Location = new System.Drawing.Point(16, 113);
+            this.btnquanLyDichVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnquanLyDichVu.Name = "btnquanLyDichVu";
             this.btnquanLyDichVu.Size = new System.Drawing.Size(50, 50);
             this.btnquanLyDichVu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -148,7 +153,8 @@
             this.btnExit.BackColor = System.Drawing.Color.Transparent;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageRotate = 0F;
-            this.btnExit.Location = new System.Drawing.Point(12, 538);
+            this.btnExit.Location = new System.Drawing.Point(16, 662);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(50, 50);
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -169,9 +175,10 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
             this.guna2ControlBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.IndianRed;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(943, 12);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1257, 15);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(60, 36);
             this.guna2ControlBox1.TabIndex = 1;
             // 
             // guna2ControlBox2
@@ -180,9 +187,10 @@
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
             this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(892, 12);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1189, 15);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox2.Size = new System.Drawing.Size(60, 36);
             this.guna2ControlBox2.TabIndex = 2;
             this.guna2ControlBox2.Click += new System.EventHandler(this.guna2ControlBox2_Click);
             // 
@@ -228,7 +236,8 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(110)))), ((int)(((byte)(240)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(82, 91);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(109, 112);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
@@ -241,7 +250,7 @@
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 62;
             this.guna2DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(906, 497);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1208, 612);
             this.guna2DataGridView1.TabIndex = 3;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -318,7 +327,7 @@
             // 
             this.guna2TextBox1.AutoRoundedCorners = true;
             this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(82)))), ((int)(((byte)(254)))));
-            this.guna2TextBox1.BorderRadius = 10;
+            this.guna2TextBox1.BorderRadius = 12;
             this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox1.DefaultText = "";
             this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -328,20 +337,20 @@
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(82, 63);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox1.Location = new System.Drawing.Point(109, 78);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(730, 22);
+            this.guna2TextBox1.Size = new System.Drawing.Size(973, 27);
             this.guna2TextBox1.TabIndex = 4;
             // 
             // guna2Button1
             // 
             this.guna2Button1.AutoRoundedCorners = true;
             this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.BorderRadius = 13;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -350,9 +359,10 @@
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.Location = new System.Drawing.Point(838, 62);
+            this.guna2Button1.Location = new System.Drawing.Point(1117, 76);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(150, 23);
+            this.guna2Button1.Size = new System.Drawing.Size(200, 28);
             this.guna2Button1.TabIndex = 5;
             this.guna2Button1.Text = "Add Appointment";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -362,9 +372,10 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(5)))), ((int)(((byte)(181)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(289, 4);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(385, 5);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(470, 58);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(585, 72);
             this.guna2HtmlLabel1.TabIndex = 6;
             this.guna2HtmlLabel1.Text = "Lịch Khám Hôm Nay";
             this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -372,17 +383,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(889, 575);
+            this.label1.Location = new System.Drawing.Point(1185, 708);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 7;
             // 
             // frmTrangChu_new
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.ClientSize = new System.Drawing.Size(1333, 738);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.guna2Button1);
@@ -392,8 +404,9 @@
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(1000, 600);
-            this.MinimumSize = new System.Drawing.Size(1000, 600);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(1333, 738);
+            this.MinimumSize = new System.Drawing.Size(1333, 738);
             this.Name = "frmTrangChu_new";
             this.Text = "frmTrangChu_new";
             this.Load += new System.EventHandler(this.frmTrangChu_new_Load);

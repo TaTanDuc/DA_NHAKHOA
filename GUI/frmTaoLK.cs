@@ -66,7 +66,8 @@ namespace GUI
             if (MessageBox.Show("Bạn có muốn tạo?", "Thông Báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 phieuKham_Services.SaveDetails(guna2TextBox5.Text,guna2DateTimePicker2.Value, guna2ComboBox1.SelectedIndex + 1, guna2ComboBox2.SelectedIndex + 1, Convert.ToInt32(guna2TextBox6.Text),Convert.ToInt32(label9.Text));
-                hoaDon_Services.Add(guna2DateTimePicker2.Value);
+                hoaDon_Services.Add(guna2DateTimePicker2.Value,Convert.ToInt32(label5.Text));
+                MessageBox.Show("Tạo thành công!","Thông Báo",MessageBoxButtons.OK);
             }
         }
 

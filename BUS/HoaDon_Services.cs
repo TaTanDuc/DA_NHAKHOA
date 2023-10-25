@@ -9,6 +9,7 @@ namespace BUS
 {
     public class HoaDon_Services
     {
+        private readonly PhieuKham_Services phieuKham_Services = new PhieuKham_Services();
         public List<Bill> GetAll()
         {
             using (var context = new NhaKhoaDB())
@@ -31,11 +32,11 @@ namespace BUS
             return context.Bills.FirstOrDefault(b => b.TicketID == i);
         }
 
-        public void Add(DateTime date)
+        public void Add(DateTime date,int id)
         {
             using (var context = new NhaKhoaDB())
             {
-                context.Bills.Add(new Bill { BillID = context.Bills.Count() + 1, TicketID = , InvoiceDate = date});
+                context.Bills.Add(new Bill { BillID = context.Bills.Count() + 1, TicketID = id , InvoiceDate = date});
                 context.SaveChanges();
             }
         }

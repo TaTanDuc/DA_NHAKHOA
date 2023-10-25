@@ -17,7 +17,6 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             frmDangNhap dangNhap = new frmDangNhap();
             if (dangNhap.ShowDialog() == DialogResult.OK)
             {
