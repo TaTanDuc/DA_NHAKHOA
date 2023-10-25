@@ -116,7 +116,7 @@ namespace GUI
         {
             try
             {
-                if (gntxtMa.Text == "" ||  gntxtGia.Text == "" || gntxtSL.Text == "")
+                if (gntxtMa.Text == "" ||  gntxtSL.Text == "")
                 {
                     throw new Exception("Vui lòng điền thông tin vào ô trống");
                 }
@@ -133,7 +133,7 @@ namespace GUI
                     IorE = gncmbTrangThai.Text,
                     IEDate = gndateNgay.Value,
                     Quantity = Convert.ToInt32(gntxtSL.Text),
-                    Total = Convert.ToInt64(gntxtGia.Text)
+                    Total = (vatLieu_Service.GetPriceID(Convert.ToInt32(gncmbTenThietBi.SelectedValue)).UnitPrice * Convert.ToInt32(gntxtSL.Text))
 
                 };
                 vatLieu_Service.AddTicket(item);
@@ -171,7 +171,7 @@ namespace GUI
                     IorE = gncmbTrangThai.Text,
                     IEDate = gndateNgay.Value,
                     Quantity = Convert.ToInt32(gntxtSL.Text),
-                    Total = Convert.ToInt64(gntxtGia.Text)
+                    Total = (vatLieu_Service.GetPriceID(Convert.ToInt32(gncmbTenThietBi.SelectedValue)).UnitPrice * Convert.ToInt32(gntxtSL.Text))
 
                 };
                 vatLieu_Service.addOrUpdateIMP(item);
@@ -211,6 +211,10 @@ namespace GUI
             {
                 MessageBox.Show(ex.Message, "Thông báo");
             }
+        }
+
+        private void gntxtSL_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }

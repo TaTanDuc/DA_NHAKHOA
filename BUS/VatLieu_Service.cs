@@ -62,5 +62,13 @@ namespace BUS
             context.ToolAndMaterials.AddOrUpdate(tol);
             context.SaveChanges();
         }
+
+        public ToolAndMaterial GetPriceID(int id)
+        {
+            using (var context = new NhaKhoaDB())
+            {
+                return context.ToolAndMaterials.FirstOrDefault(t => t.TaM_ID == id);
+            }
+        }
     }
 }

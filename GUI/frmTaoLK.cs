@@ -47,6 +47,7 @@ namespace GUI
             guna2ComboBox1.DisplayMember = "DiagnosticContent";
             CbxTreatment();
 
+            guna2DateTimePicker2.Value = DateTime.Now;
             guna2CustomRadioButton1.Checked = true;
             label5.Text = phieuKham_Services.GetTicketID().ToString();
         }
@@ -62,7 +63,7 @@ namespace GUI
             }
                 
             if (benhNhanServices.FindByID(guna2TextBox5.Text) == null)
-                benhNhanServices.AddOrUpdateDuc(guna2TextBox5.Text,guna2TextBox1.Text,GioiTinh(),guna2DateTimePicker2.Value,guna2TextBox3.Text);
+                benhNhanServices.AddOrUpdateDuc(guna2TextBox5.Text,guna2TextBox1.Text,GioiTinh(),guna2DateTimePicker1.Value,guna2TextBox3.Text);
             if (MessageBox.Show("Bạn có muốn tạo?", "Thông Báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 phieuKham_Services.SaveDetails(guna2TextBox5.Text,guna2DateTimePicker2.Value, guna2ComboBox1.SelectedIndex + 1, guna2ComboBox2.SelectedIndex + 1, Convert.ToInt32(guna2TextBox6.Text),Convert.ToInt32(label9.Text));
