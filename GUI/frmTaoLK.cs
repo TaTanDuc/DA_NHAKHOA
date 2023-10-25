@@ -70,6 +70,7 @@ namespace GUI
                 hoaDon_Services.Add(guna2DateTimePicker2.Value,Convert.ToInt32(label5.Text));
                 MessageBox.Show("Tạo thành công!","Thông Báo",MessageBoxButtons.OK);
             }
+            this.Close();
         }
 
         private void guna2ComboBox1_SelectedValueChanged(object sender, EventArgs e)

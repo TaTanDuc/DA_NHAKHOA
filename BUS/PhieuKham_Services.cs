@@ -26,11 +26,17 @@ namespace BUS
             return context.ExamTickets.Where(t =>  t.AppointmentDate == d && t.StatusID == i || t.Customer.FullName == s || t.Customer.Phone == s).ToList();
         }
 
-        public List<ExamTicket> GetToday()
+        public List<ExamTicket> Tim(string s)
         {
             var context = new NhaKhoaDB();
-            var date = DateTime.Now;
-            return context.ExamTickets.Where(t => t.AppointmentDate == date).ToList();
+            return context.ExamTickets.Where(t => t.Customer.FullName == s || t.Customer.Phone == s).ToList();
+        }
+
+        public List<ExamTicket> GetToday()
+        {
+            DateTime date = DateTime.Today;
+            var context = new NhaKhoaDB();
+            return context.ExamTickets.Where(e => e.AppointmentDate >= date).ToList();
         }
 
         public void SaveDetails(string CID, DateTime ApD , int d, int tr, int q, int t)

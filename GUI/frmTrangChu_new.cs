@@ -1,4 +1,5 @@
 ﻿using BUS;
+using DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,27 +26,25 @@ namespace GUI
         {
 
         }
-        public void reload()
+        public void reload(List<ExamTicket> list)
         {
             guna2DataGridView1.Rows.Clear();
-            foreach (var item in phieuKham_Services.GetToday())
+            foreach (var item in list)
             {
                 var index = guna2DataGridView1.Rows.Add();
-                guna2DataGridView1.Rows[index].Cells[1].Value = item.Customer.FullName;
-                guna2DataGridView1.Rows[index].Cells[2].Value = item.Customer.BirthDay;
-                guna2DataGridView1.Rows[index].Cells[3].Value = item.Customer.Phone;
-                guna2DataGridView1.Rows[index].Cells[4].Value = item.AppointmentDate;
-                guna2DataGridView1.Rows[index].Cells[5].Value = item.Status.StatusName;
+                guna2DataGridView1.Rows[index].Cells[0].Value = item.Customer.FullName;
+                guna2DataGridView1.Rows[index].Cells[1].Value = item.Customer.BirthDay;
+                guna2DataGridView1.Rows[index].Cells[2].Value = item.Customer.Phone;
+                guna2DataGridView1.Rows[index].Cells[3].Value = item.AppointmentDate;
+                guna2DataGridView1.Rows[index].Cells[4].Value = item.Status.StatusName;
 
             }
         }
 
         private void frmTrangChu_new_Load(object sender, EventArgs e)
         {
-            reload();
+            reload(phieuKham_Services.GetToday());
         }
-
-    
 
         private void btnquanLyNhanVien_Click(object sender, EventArgs e)
         {
@@ -54,7 +53,7 @@ namespace GUI
             nv.ShowDialog();
             nv.Dispose();
             this.Show();
-            reload();
+            reload(phieuKham_Services.GetToday());
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -77,7 +76,7 @@ namespace GUI
             lichKham.ShowDialog();
             lichKham.Dispose();
             this.Show();
-            reload();
+            reload(phieuKham_Services.GetToday());
         }
         private void btnquanLyDichVu_Click(object sender, EventArgs e)
         {
@@ -86,7 +85,7 @@ namespace GUI
             dieuTri.ShowDialog();
             dieuTri.Dispose();
             this.Show();
-            reload();
+            reload(phieuKham_Services.GetToday());
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -96,7 +95,7 @@ namespace GUI
             frmNoiDungKham.ShowDialog();
             frmNoiDungKham.Dispose();
             this.Show();
-            reload();
+            reload(phieuKham_Services.GetToday());
         }
 
         private void guna2PictureBox2_Click(object sender, EventArgs e)
@@ -106,7 +105,14 @@ namespace GUI
             qLVatLieu.ShowDialog();
             qLVatLieu.Dispose();
             this.Show();
-            reload();
+            reload(phieuKham_Services.GetToday());
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            if(guna2TextBox1.Text == "")
+                reload(phieuKham_Services.GetToday());
+            else reload(phieuKham_Services.Tim(guna2TextBox1.Text));
         }
     }
 }
