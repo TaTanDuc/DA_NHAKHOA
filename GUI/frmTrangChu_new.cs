@@ -58,10 +58,16 @@ namespace GUI
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            frmDangNhap frmDangNhap = new frmDangNhap();
-            this.Hide();
-            if (frmDangNhap.ShowDialog() != DialogResult.OK)
-                this.Close();
+            DialogResult dr = MessageBox.Show("Đăng Xuất?", "Thông Báo", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.Yes)
+            {
+                frmDangNhap frmDangNhap = new frmDangNhap();
+                this.Hide();
+                if (frmDangNhap.ShowDialog() != DialogResult.OK)
+                    this.Close();
+                else this.Show();
+            }
+            else return;
         }
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

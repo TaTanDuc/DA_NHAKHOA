@@ -88,13 +88,14 @@ namespace GUI
                     throw new Exception("Vui lòng điền thông tin vào ô trống");
                 }
 
-                int selectedRow = getSelectedRow(txtMa.Text);
-                if (selectedRow == -1)
-                {
-                    selectedRow = dgvDSNV.Rows.Add();
-                    insertUpdate(selectedRow);
-                }
                 
+                if (nhanvien.GetStaff(txtMa.Text) == null)
+                {
+                    var nv = new Staff() { StaffID = txtMa.Text, FullName = txtTen.Text, Phone = txtSDT.Text };
+                    nhanvien.addOrUpdate(nv);
+                    MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK);
+                }else MessageBox.Show("Đã tồn tại nhân viên!", "Thông báo", MessageBoxButtons.OK);
+
                 Refresh();
 
             }
@@ -133,15 +134,15 @@ namespace GUI
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            int selectedRow = getSelectedRow(txtMa.Text);
-            if (selectedRow != -1)
+            if (nhanvien.GetStaff(txtMa.Text) != null)
             {
-                insertUpdate(selectedRow);
+                var nv = new Staff() { StaffID = txtMa.Text , FullName = txtTen.Text , Phone = txtSDT.Text };
+                nhanvien.addOrUpdate(nv);
                 MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK);
             }
             else
             {
-                MessageBox.Show("Không tìm thấy dịch vụ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Đã tồn tại nhân viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -149,18 +150,18 @@ namespace GUI
         {
             try
             {
-                int selectedRow = getSelectedRow(txtMa.Text);
-                if (selectedRow == -1)
+                if (nhanvien.GetStaff(txtMa.Text) == null)
                 {
                     throw new Exception("Không tìm thấy dịch vụ!");
                 }
                 else
                 {
+                    var nv = new Staff() { StaffID = txtMa.Text, FullName = txtTen.Text, Phone = txtSDT.Text };
                     DialogResult dr = MessageBox.Show("Xóa dịch vụ?", "Thông báo", MessageBoxButtons.YesNo);
                     if (dr == DialogResult.Yes)
                     {
-                        dgvDSNV.Rows.RemoveAt(selectedRow);
-                        MessageBox.Show("Xóa dịch vụ thành công!", "Thông báo", MessageBoxButtons.OK);
+                        nhanvien.remove(nv);
+                        MessageBox.Show("Xóa nv thành công!", "Thông báo", MessageBoxButtons.OK);
                     }
                 }
             }

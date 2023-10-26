@@ -56,5 +56,13 @@ namespace BUS
             }
         }
 
+        public void AddOrUpdateStatus(int id , int status)
+        {
+            var context = new NhaKhoaDB();
+            var item = context.ExamTickets.FirstOrDefault(t => t.TicketID == id);
+            item.StatusID = status;
+            context.SaveChanges();
+        }
+
     }
 }

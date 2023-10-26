@@ -49,9 +49,14 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.khámToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chưaKhámToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hủyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -197,6 +202,7 @@
             this.Column6,
             this.Column4,
             this.Column1});
+            this.guna2DataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -272,6 +278,36 @@
             this.Column1.HeaderText = "Trạng Thái";
             this.Column1.Name = "Column1";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.khámToolStripMenuItem,
+            this.chưaKhámToolStripMenuItem,
+            this.hủyToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 92);
+            // 
+            // khámToolStripMenuItem
+            // 
+            this.khámToolStripMenuItem.Name = "khámToolStripMenuItem";
+            this.khámToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.khámToolStripMenuItem.Text = "Đã Khám";
+            this.khámToolStripMenuItem.Click += new System.EventHandler(this.khámToolStripMenuItem_Click);
+            // 
+            // chưaKhámToolStripMenuItem
+            // 
+            this.chưaKhámToolStripMenuItem.Name = "chưaKhámToolStripMenuItem";
+            this.chưaKhámToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.chưaKhámToolStripMenuItem.Text = "Chưa Khám";
+            this.chưaKhámToolStripMenuItem.Click += new System.EventHandler(this.chưaKhámToolStripMenuItem_Click);
+            // 
+            // hủyToolStripMenuItem
+            // 
+            this.hủyToolStripMenuItem.Name = "hủyToolStripMenuItem";
+            this.hủyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.hủyToolStripMenuItem.Text = "Hủy";
+            this.hủyToolStripMenuItem.Click += new System.EventHandler(this.hủyToolStripMenuItem_Click);
+            // 
             // frmLichKham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,6 +326,7 @@
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -310,5 +347,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem khámToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chưaKhámToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hủyToolStripMenuItem;
     }
 }

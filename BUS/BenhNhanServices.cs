@@ -52,11 +52,11 @@ namespace BUS
             }
         }
 
-        public void AddOrUpdateDuc(string CID, string name, string s, DateTime BrD, string sdt)
+        public void AddOrUpdateDuc(Customer cs)
         {
             using (var context = new NhaKhoaDB())
             {
-                context.Customers.AddOrUpdate(new Customer { CustomerID = CID , FullName = name , Sex = s, BirthDay = BrD, Phone = sdt});
+                context.Customers.AddOrUpdate(cs);
                 context.SaveChanges();
             }
         }

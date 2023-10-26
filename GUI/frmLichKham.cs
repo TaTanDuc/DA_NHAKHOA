@@ -57,6 +57,7 @@ namespace GUI
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+            update(phieuKham_Services.GetAll());
         }
 
         private void guna2DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -67,6 +68,27 @@ namespace GUI
             frmHoaDon.ShowDialog();
             frmHoaDon.Dispose();
             this.Show();
+        }
+
+        private void khámToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int index = guna2DataGridView1.SelectedCells[0].RowIndex;
+            phieuKham_Services.AddOrUpdateStatus(Convert.ToInt32(guna2DataGridView1.Rows[index].Cells[0].Value), 1);
+            update(phieuKham_Services.GetAll());
+        }
+
+        private void chưaKhámToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int index = guna2DataGridView1.SelectedCells[0].RowIndex;
+            phieuKham_Services.AddOrUpdateStatus(Convert.ToInt32(guna2DataGridView1.Rows[index].Cells[0].Value), 0);
+            update(phieuKham_Services.GetAll());
+        }
+
+        private void hủyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int index = guna2DataGridView1.SelectedCells[0].RowIndex;
+            phieuKham_Services.AddOrUpdateStatus(Convert.ToInt32(guna2DataGridView1.Rows[index].Cells[0].Value), -1);
+            update(phieuKham_Services.GetAll());
         }
     }
 }

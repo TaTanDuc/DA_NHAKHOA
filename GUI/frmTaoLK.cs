@@ -1,5 +1,6 @@
 ﻿using BUS;
 using DAL.Entities;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,7 +64,10 @@ namespace GUI
             }
                 
             if (benhNhanServices.FindByID(guna2TextBox5.Text) == null)
-                benhNhanServices.AddOrUpdateDuc(guna2TextBox5.Text,guna2TextBox1.Text,GioiTinh(),guna2DateTimePicker1.Value,guna2TextBox3.Text);
+            {
+                var bn = new Customer() { CustomerID = guna2TextBox5.Text, FullName = guna2TextBox1.Text, Sex = GioiTinh(), BirthDay = guna2DateTimePicker1.Value, Phone = guna2TextBox3.Text };
+                benhNhanServices.AddOrUpdateDuc(bn);
+            }
             if (MessageBox.Show("Bạn có muốn tạo?", "Thông Báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 phieuKham_Services.SaveDetails(guna2TextBox5.Text,guna2DateTimePicker2.Value, guna2ComboBox1.SelectedIndex + 1, guna2ComboBox2.SelectedIndex + 1, Convert.ToInt32(guna2TextBox6.Text),Convert.ToInt32(label9.Text));

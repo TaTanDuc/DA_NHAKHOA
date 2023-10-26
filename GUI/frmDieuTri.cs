@@ -21,6 +21,14 @@ namespace GUI
             InitializeComponent();
         }
         
+        public void clear()
+        {
+            txtChanDoanID.Clear();
+            txtDieuTriID.Clear();
+            txtDonVi.Clear();
+            txtGia.Clear();
+        }
+
         public void reLoad()
         {
             guna2DataGridView1.Rows.Clear();   
@@ -61,6 +69,7 @@ namespace GUI
             }
             else MessageBox.Show("Đã tồn tại mã điều trị", "Thông Báo", MessageBoxButtons.OK);
             reLoad();
+            clear();
         }
 
         private void btnChanDoan_Click(object sender, EventArgs e)
@@ -70,6 +79,8 @@ namespace GUI
             chanDoan.ShowDialog();
             chanDoan.Dispose();
             this.Show();
+            reLoad();
+            clear();
         }
 
 
@@ -95,6 +106,7 @@ namespace GUI
             }
             else MessageBox.Show("Không tồn tại mã điều trị", "Thông Báo", MessageBoxButtons.OK);
             reLoad();
+            clear();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -113,6 +125,7 @@ namespace GUI
             }
             else MessageBox.Show("Không tồn tại mã điều trị", "Thông Báo", MessageBoxButtons.OK);
             reLoad();
+            clear();
         }
     }
 }

@@ -30,6 +30,12 @@ namespace BUS
             
         }
 
+        public Staff GetStaff(string id)
+        {
+            var context = new NhaKhoaDB();
+            return context.Staffs.FirstOrDefault(p => p.StaffID == id);
+        }
+
         public void addOrUpdate(Staff s)
         {
             var context = new NhaKhoaDB();
