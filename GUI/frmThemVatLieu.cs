@@ -18,7 +18,7 @@ namespace GUI
 {
     public partial class frmThemVatLieu : Form
     {
-        private readonly VatLieu_Service vatLieu_Service = new VatLieu_Service();
+        private readonly Storage_Service vatLieu_Service = new Storage_Service();
         public frmThemVatLieu()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace GUI
 
         private void gnbtnThem_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 List<ToolAndMaterial> tol = new List<ToolAndMaterial>();
                 tol = vatLieu_Service.GetAll();
@@ -57,12 +57,12 @@ namespace GUI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK);
-            }           
+            }           */
         }
 
         private void gnbtnSua_Click(object sender, EventArgs e)
         {
-            List<ToolAndMaterial> tol = new List<ToolAndMaterial>();
+           /* List<ToolAndMaterial> tol = new List<ToolAndMaterial>();
             tol = vatLieu_Service.GetAll();
             int flag = -1;
             foreach (var t in tol)
@@ -86,12 +86,12 @@ namespace GUI
             if(flag == -1)
             {
                 MessageBox.Show("Không tìm thấy", "Thông báo", MessageBoxButtons.OK);
-            }
+            }*/
         }
 
         private void gnbtnXoa_Click(object sender, EventArgs e)
         {
-            var context = new NhaKhoaDB();
+            /*var context = new NhaKhoaDB();
             try
             {
                 int id = Convert.ToInt32(gntxtMa.Text);
@@ -112,7 +112,7 @@ namespace GUI
             catch (Exception ex)
             {
                 MessageBox.Show("Dụng cụ đang sử dụng, không thể xóa!", "Thông báo", MessageBoxButtons.OK);
-            }
+            }*/
         }
     }
 }

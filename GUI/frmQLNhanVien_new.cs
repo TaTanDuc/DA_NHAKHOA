@@ -14,7 +14,7 @@ namespace GUI
 {
     public partial class frmQLNhanVien_new : Form
     {
-        private readonly NhanVien_Services nhanvien = new NhanVien_Services();
+        private readonly Permission_Services nhanvien = new Permission_Services();
         public frmQLNhanVien_new()
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace GUI
         {
 
         }
-        private void BindGrid(List<Staff> dsNhanvien)
+       /* private void BindGrid(List<Staff> dsNhanvien)
         {
             dgvDSNV.Rows.Clear();
             foreach (var item in dsNhanvien)
@@ -39,7 +39,7 @@ namespace GUI
                 dgvDSNV.Rows[index].Cells[1].Value = item.FullName;
                 dgvDSNV.Rows[index].Cells[2].Value = item.Phone;
             }
-        }
+        }*/
 
         private void RefreshC()
         {
@@ -48,14 +48,14 @@ namespace GUI
             txtSDT.Clear();
             
         }
-        private void LoadList()
+        /*private void LoadList()
         {
             List<Staff> staffs = new List<Staff>();
             staffs = nhanvien.GetAllStaff();
             List<LogIn> lg = new List<LogIn>();
             lg = nhanvien.GetAllLogIn();
             BindGrid(staffs);
-        }
+        }*/
 
         private int getSelectedRow(string staffid)
         {
@@ -81,7 +81,7 @@ namespace GUI
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 if (txtMa.Text == "" || txtTen.Text == "" || txtSDT.Text == "" )
                 {
@@ -102,7 +102,7 @@ namespace GUI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK);
-            }
+            }*/
         }
 
 
@@ -114,7 +114,7 @@ namespace GUI
 
         private void frmQLNhanVien_new_Load(object sender, EventArgs e)
         {
-            try
+            /*try
             {
 
                 var dsNhanVien  = nhanvien.GetAllStaff();
@@ -124,7 +124,7 @@ namespace GUI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -134,7 +134,7 @@ namespace GUI
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            if (nhanvien.GetStaff(txtMa.Text) != null)
+            /*if (nhanvien.GetStaff(txtMa.Text) != null)
             {
                 var nv = new Staff() { StaffID = txtMa.Text , FullName = txtTen.Text , Phone = txtSDT.Text };
                 nhanvien.addOrUpdate(nv);
@@ -143,12 +143,12 @@ namespace GUI
             else
             {
                 MessageBox.Show("Đã tồn tại nhân viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            }*/
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 if (nhanvien.GetStaff(txtMa.Text) == null)
                 {
@@ -168,7 +168,7 @@ namespace GUI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
         }
 
         private void dgvDSNV_CellClick(object sender, DataGridViewCellEventArgs e)

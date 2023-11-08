@@ -6,26 +6,35 @@ namespace DAL.Entities
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Prescription")]
-    public partial class Prescription
+    public partial class Detail
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Prescription()
+        public Detail()
         {
             Invoices = new HashSet<Invoice>();
-            PrescriptionDetails = new HashSet<PrescriptionDetail>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int PrescriptionID { get; set; }
+        [Key]
+        [Column(Order = 0)]
+        public DateTime Appointment { get; set; }
 
-        [Column(TypeName = "ntext")]
-        public string PrescriptionDescription { get; set; }
+        [Key]
+        [Column(Order = 1)]
+        [StringLength(2)]
+        public string PermissionID { get; set; }
+
+        [Key]
+        [Column(Order = 2)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int UserID { get; set; }
+
+        public int? DentistID { get; set; }
+
+        public virtual Schedule Schedule { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Invoice> Invoices { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PrescriptionDetail> PrescriptionDetails { get; set; }
+        public virtual ServicesDetail ServicesDetail { get; set; }
     }
 }

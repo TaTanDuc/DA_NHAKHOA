@@ -6,28 +6,35 @@ namespace DAL.Entities
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("ToolAndMaterial")]
-    public partial class ToolAndMaterial
+    public partial class Service
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ToolAndMaterial()
+        public Service()
         {
-            ImportExportTickets = new HashSet<ImportExportTicket>();
+            ServicesDetails = new HashSet<ServicesDetail>();
         }
 
         [Key]
+        [Column(Order = 0)]
+        [StringLength(3)]
+        public string CategoryID { get; set; }
+
+        [Key]
+        [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int TaM_ID { get; set; }
+        public int ServiceID { get; set; }
 
         [Column(TypeName = "ntext")]
-        public string Content { get; set; }
+        public string ServiceName { get; set; }
 
         [Column(TypeName = "ntext")]
-        public string Unit { get; set; }
+        public string ServiceUnit { get; set; }
 
-        public int? UnitPrice { get; set; }
+        public int? ServiceUnitPrice { get; set; }
+
+        public virtual ServiceCategory ServiceCategory { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ImportExportTicket> ImportExportTickets { get; set; }
+        public virtual ICollection<ServicesDetail> ServicesDetails { get; set; }
     }
 }

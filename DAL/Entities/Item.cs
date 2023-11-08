@@ -6,36 +6,38 @@ namespace DAL.Entities
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Treatment")]
-    public partial class Treatment
+    [Table("Item")]
+    public partial class Item
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Treatment()
+        public Item()
         {
-            ExamDetails = new HashSet<ExamDetail>();
+            ImportExports = new HashSet<ImportExport>();
+            Storages = new HashSet<Storage>();
         }
 
         [Key]
         [Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int DiagnoseID { get; set; }
+        [StringLength(3)]
+        public string ItemType { get; set; }
 
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int TreatmentID { get; set; }
+        public int ItemID { get; set; }
 
         [Column(TypeName = "ntext")]
-        public string TreatmentContent { get; set; }
+        public string ItemName { get; set; }
 
         [Column(TypeName = "ntext")]
         public string Unit { get; set; }
 
         public int? UnitPrice { get; set; }
 
-        public virtual Diagnose Diagnose { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ImportExport> ImportExports { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ExamDetail> ExamDetails { get; set; }
+        public virtual ICollection<Storage> Storages { get; set; }
     }
 }

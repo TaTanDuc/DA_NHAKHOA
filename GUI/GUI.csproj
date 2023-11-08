@@ -66,6 +66,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAccount.Designer.cs">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddServices.Designer.cs">
+      <DependentUpon>AddServices.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmChanDoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,11 +114,11 @@
     <Compile Include="frmPhieuNX.Designer.cs">
       <DependentUpon>frmPhieuNX.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTaoLK.cs">
+    <Compile Include="frmCreateAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTaoLK.Designer.cs">
-      <DependentUpon>frmTaoLK.cs</DependentUpon>
+    <Compile Include="frmCreateAppointment.Designer.cs">
+      <DependentUpon>frmCreateAppointment.cs</DependentUpon>
     </Compile>
     <Compile Include="frmQLNhanVien_new.cs">
       <SubType>Form</SubType>
@@ -134,6 +146,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CreateAccount.resx">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddServices.resx">
+      <DependentUpon>AddServices.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmChanDoan.resx">
       <DependentUpon>frmChanDoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,8 +172,8 @@
     <EmbeddedResource Include="frmPhieuNX.resx">
       <DependentUpon>frmPhieuNX.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTaoLK.resx">
-      <DependentUpon>frmTaoLK.cs</DependentUpon>
+    <EmbeddedResource Include="frmCreateAppointment.resx">
+      <DependentUpon>frmCreateAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLNhanVien_new.resx">
       <DependentUpon>frmQLNhanVien_new.cs</DependentUpon>

@@ -14,7 +14,7 @@ namespace GUI
 {
     public partial class frmQLVatLieu : Form
     {
-        private readonly VatLieu_Service vatLieu_Service = new VatLieu_Service();
+        private readonly Storage_Service vatLieu_Service = new Storage_Service();
         public frmQLVatLieu()
         {
             InitializeComponent();
@@ -27,31 +27,7 @@ namespace GUI
 
         private void frmQLVatLieu_Load(object sender, EventArgs e)
         {
-            try
-            {
-                var listTool = vatLieu_Service.GetAll();              
-                BindGrid(listTool);
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-
-        private void BindGrid(List<ToolAndMaterial> toolAndMaterials)
-        {
-            gndgvQLVL.Rows.Clear();
-            foreach(var item in toolAndMaterials)
-            {
-                int index = gndgvQLVL.Rows.Add();
-                gndgvQLVL.Rows[index].Cells[0].Value = item.TaM_ID;
-                gndgvQLVL.Rows[index].Cells[1].Value = item.Content;
-                gndgvQLVL.Rows[index].Cells[2].Value = item.Unit;
-                gndgvQLVL.Rows[index].Cells[3].Value = item.UnitPrice;
-
-            }
         }
 
         private void gnbtnThemMoi_Click(object sender, EventArgs e)
@@ -61,14 +37,9 @@ namespace GUI
             FrmPhieuNX.ShowDialog();
             this.Show();
         }
-
-        public string id, content, unit, price;
-        public int flag;
         private void LoadList()
         {
-            List<ToolAndMaterial> tol = new List<ToolAndMaterial>();
-            tol = vatLieu_Service.GetAll();
-            BindGrid(tol);
+
         }
         private void gnbtnQLDungCu_Click(object sender, EventArgs e)
         {

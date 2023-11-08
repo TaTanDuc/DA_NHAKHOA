@@ -15,7 +15,7 @@ namespace GUI
 {
     public partial class frmTrangChu_new : Form
     {
-        private readonly PhieuKham_Services phieuKham_Services = new PhieuKham_Services();
+        private readonly Schedule_Services phieuKham_Services = new Schedule_Services();
         
         public frmTrangChu_new()
         {
@@ -26,7 +26,7 @@ namespace GUI
         {
 
         }
-        public void reload(List<ExamTicket> list)
+        /*public void reload(List<ExamTicket> list)
         {
             guna2DataGridView1.Rows.Clear();
             foreach (var item in list)
@@ -39,11 +39,11 @@ namespace GUI
                 guna2DataGridView1.Rows[index].Cells[4].Value = item.Status.StatusName;
 
             }
-        }
+        }*/
 
         private void frmTrangChu_new_Load(object sender, EventArgs e)
         {
-            reload(phieuKham_Services.GetToday());
+            
         }
 
         private void btnquanLyNhanVien_Click(object sender, EventArgs e)
@@ -53,7 +53,6 @@ namespace GUI
             nv.ShowDialog();
             nv.Dispose();
             this.Show();
-            reload(phieuKham_Services.GetToday());
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -82,7 +81,6 @@ namespace GUI
             lichKham.ShowDialog();
             lichKham.Dispose();
             this.Show();
-            reload(phieuKham_Services.GetToday());
         }
         private void btnquanLyDichVu_Click(object sender, EventArgs e)
         {
@@ -91,17 +89,15 @@ namespace GUI
             dieuTri.ShowDialog();
             dieuTri.Dispose();
             this.Show();
-            reload(phieuKham_Services.GetToday());
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            frmTaoLK frmNoiDungKham = new frmTaoLK();
+            frmCreateAppointment frmNoiDungKham = new frmCreateAppointment();
             this.Hide();
             frmNoiDungKham.ShowDialog();
             frmNoiDungKham.Dispose();
             this.Show();
-            reload(phieuKham_Services.GetToday());
         }
 
         private void guna2PictureBox2_Click(object sender, EventArgs e)
@@ -111,14 +107,11 @@ namespace GUI
             qLVatLieu.ShowDialog();
             qLVatLieu.Dispose();
             this.Show();
-            reload(phieuKham_Services.GetToday());
         }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
-            if(guna2TextBox1.Text == "")
-                reload(phieuKham_Services.GetToday());
-            else reload(phieuKham_Services.Tim(guna2TextBox1.Text));
+
         }
     }
 }

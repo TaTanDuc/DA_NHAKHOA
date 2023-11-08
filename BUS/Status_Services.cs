@@ -11,7 +11,7 @@ namespace BUS
     {
         public List<Status> GetAll()
         {
-            using (var context = new NhaKhoaDB())
+            using (var context = new DentalClinicDB())
             {
                 return context.Status.ToList();
             }

@@ -14,29 +14,15 @@ namespace GUI
 {
     public partial class frmHoaDon : Form
     {
-        private readonly HoaDon_Services hoaDon_Services = new HoaDon_Services();
-        private readonly PhieuKham_Services phieuKham_Services = new PhieuKham_Services();
-        Bill bill;
+        private readonly Invoice_Services hoaDon_Services = new Invoice_Services();
+        private readonly Schedule_Services phieuKham_Services = new Schedule_Services();
         public frmHoaDon(int id)
         {
-            InitializeComponent();
-            this.bill = hoaDon_Services.GetByTID(id);
         }
 
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
-            label3.Text = bill.BillID.ToString();
-            label5.Text = bill.TicketID.ToString();
 
-            label7.Text = bill.ExamDetail.ExamTicket.Customer.FullName;
-            label9.Text = bill.InvoiceDate?.ToString("dd/MM/yyyy");
-
-            label11.Text = $"Chẩn Đoán:{bill.ExamDetail.Treatment.Diagnose.DiagnosticContent}\n" +
-                            $"Điều Trị: {bill.ExamDetail.Treatment.TreatmentContent}\n" +
-                            $"Đơn Giá: {bill.ExamDetail.Treatment.UnitPrice}/{bill.ExamDetail.Treatment.Unit}\n" +
-                            $"Số Lượng: {bill.ExamDetail.Quantity}";
-
-            label13.Text = bill.ExamDetail.Total.ToString();
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)

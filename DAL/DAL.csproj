@@ -53,19 +53,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Bill.cs" />
-    <Compile Include="Entities\Customer.cs" />
-    <Compile Include="Entities\Diagnose.cs" />
-    <Compile Include="Entities\ExamDetail.cs" />
-    <Compile Include="Entities\ExamTicket.cs" />
-    <Compile Include="Entities\ImportExportTicket.cs" />
-    <Compile Include="Entities\LogIn.cs" />
-    <Compile Include="Entities\NhaKhoaDB.cs" />
+    <Compile Include="Entities\DentalClinicDB.cs" />
+    <Compile Include="Entities\Detail.cs" />
+    <Compile Include="Entities\ImportExport.cs" />
+    <Compile Include="Entities\Invoice.cs" />
+    <Compile Include="Entities\Item.cs" />
+    <Compile Include="Entities\Permission.cs" />
     <Compile Include="Entities\Prescription.cs" />
-    <Compile Include="Entities\Staff.cs" />
+    <Compile Include="Entities\PrescriptionDetail.cs" />
+    <Compile Include="Entities\Schedule.cs" />
+    <Compile Include="Entities\Service.cs" />
+    <Compile Include="Entities\ServiceCategory.cs" />
+    <Compile Include="Entities\ServicesDetail.cs" />
     <Compile Include="Entities\Status.cs" />
-    <Compile Include="Entities\ToolAndMaterial.cs" />
-    <Compile Include="Entities\Treatment.cs" />
+    <Compile Include="Entities\Storage.cs" />
+    <Compile Include="Entities\UsageDetail.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

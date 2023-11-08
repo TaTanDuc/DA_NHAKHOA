@@ -14,7 +14,7 @@ namespace GUI
 {
     public partial class frmPhieuNX : Form
     {
-        private readonly  VatLieu_Service vatLieu_Service = new VatLieu_Service();
+        private readonly  Storage_Service vatLieu_Service = new Storage_Service();
         public frmPhieuNX()
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace GUI
 
         private void frmPhieuNX_Load(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 var listTicket = vatLieu_Service.GetAllTicket();
                 var listTool = vatLieu_Service.GetAll();
@@ -43,30 +43,7 @@ namespace GUI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void FillCmbListTool(List<ToolAndMaterial> tol)
-        {
-            gncmbTenThietBi.DataSource = tol;
-            gncmbTenThietBi.DisplayMember = "Content";
-            gncmbTenThietBi.ValueMember = "TaM_ID";
-        }
-
-        private void BindGrid(List<ImportExportTicket> importExportTickets)
-        {
-            gndgvNhapXuat.Rows.Clear();
-            foreach (var item in importExportTickets)
-            {
-                int index = gndgvNhapXuat.Rows.Add();
-                gndgvNhapXuat.Rows[index].Cells[0].Value = item.IETicketID;
-                gndgvNhapXuat.Rows[index].Cells[1].Value = item.ToolAndMaterial.Content;
-                gndgvNhapXuat.Rows[index].Cells[2].Value = item.IorE;
-                gndgvNhapXuat.Rows[index].Cells[3].Value = item.IEDate;
-                gndgvNhapXuat.Rows[index].Cells[4].Value = item.Quantity;
-                gndgvNhapXuat.Rows[index].Cells[5].Value = item.Total;
-
-            }
+            }*/
         }
 
         private void gnbtnThoat_Click(object sender, EventArgs e)
@@ -107,14 +84,14 @@ namespace GUI
 
         private void LoadList()
         {
-            List<ImportExportTicket> imp = new List<ImportExportTicket>();
+            /*List<ImportExportTicket> imp = new List<ImportExportTicket>();
             imp = vatLieu_Service.GetAllTicket();
-            BindGrid(imp);
+            BindGrid(imp);*/
         }
 
         private void gnbtnThen_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 if (gntxtMa.Text == "" ||  gntxtSL.Text == "")
                 {
@@ -144,7 +121,7 @@ namespace GUI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK);
-            }
+            }*/
         }
 
         private int getSelectedRow(string ID)
@@ -161,7 +138,7 @@ namespace GUI
 
         private void gnbtnSua_Click(object sender, EventArgs e)
         {
-            int selectedRow = getSelectedRow(gntxtMa.Text);
+            /*int selectedRow = getSelectedRow(gntxtMa.Text);
             if (selectedRow != -1)
             {
                 var item = new ImportExportTicket()
@@ -182,13 +159,13 @@ namespace GUI
             else
             {
                 MessageBox.Show("Không tìm thấy!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            }*/
 
         }
 
         private void gnbtnXoa_Click(object sender, EventArgs e)
         {
-            var context = new NhaKhoaDB();
+            /*var context = new NhaKhoaDB();
             try
             {
                 int id = Convert.ToInt32(gntxtMa.Text);
@@ -210,7 +187,7 @@ namespace GUI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Thông báo");
-            }
+            }*/
         }
 
         private void gntxtSL_TextChanged(object sender, EventArgs e)

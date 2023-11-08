@@ -11,16 +11,16 @@ namespace DAL.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Status()
         {
-            ExamTickets = new HashSet<ExamTicket>();
+            Storages = new HashSet<Storage>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int StatusID { get; set; }
+        [StringLength(2)]
+        public string StatusID { get; set; }
 
         [Column(TypeName = "ntext")]
         public string StatusName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ExamTicket> ExamTickets { get; set; }
+        public virtual ICollection<Storage> Storages { get; set; }
     }
 }

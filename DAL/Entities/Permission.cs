@@ -6,22 +6,22 @@ namespace DAL.Entities
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Diagnose")]
-    public partial class Diagnose
+    [Table("Permission")]
+    public partial class Permission
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Diagnose()
+        public Permission()
         {
-            Treatments = new HashSet<Treatment>();
+            Users = new HashSet<User>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int DiagnoseID { get; set; }
+        [StringLength(2)]
+        public string PermissionID { get; set; }
 
         [Column(TypeName = "ntext")]
-        public string DiagnosticContent { get; set; }
+        public string PermissionName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Treatment> Treatments { get; set; }
+        public virtual ICollection<User> Users { get; set; }
     }
 }

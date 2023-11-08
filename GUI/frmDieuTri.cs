@@ -14,7 +14,7 @@ namespace GUI
 {
     public partial class frmDieuTri : Form
     {
-        private readonly DichVu_Services dichVU_Services = new DichVu_Services();
+        private readonly Service_Services dichVU_Services = new Service_Services();
 
         public frmDieuTri()
         {
@@ -31,7 +31,7 @@ namespace GUI
 
         public void reLoad()
         {
-            guna2DataGridView1.Rows.Clear();   
+            /*guna2DataGridView1.Rows.Clear();   
             foreach (var item in dichVU_Services.GetAllTreatment())
             {
                 var index = guna2DataGridView1.Rows.Add();
@@ -44,7 +44,7 @@ namespace GUI
                 cmbPhuongThuc.DataSource = dichVU_Services.GetAllDiagnose();
                 cmbPhuongThuc.ValueMember = "DiagnoseID";
                 cmbPhuongThuc.DisplayMember = "DiagnosticContent";
-            }
+            }*/
         }
 
         private void frmDieuTri_Load(object sender, EventArgs e)
@@ -55,7 +55,7 @@ namespace GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if(txtDieuTriID.Text == "" || txtChanDoanID.Text == "" || txtDonVi.Text == "" || txtGia.Text == "")
+            /*if(txtDieuTriID.Text == "" || txtChanDoanID.Text == "" || txtDonVi.Text == "" || txtGia.Text == "")
             {
                 MessageBox.Show("Điền đầy đủ thông tin");
                 return;
@@ -69,7 +69,7 @@ namespace GUI
             }
             else MessageBox.Show("Đã tồn tại mã điều trị", "Thông Báo", MessageBoxButtons.OK);
             reLoad();
-            clear();
+            clear();*/
         }
 
         private void btnChanDoan_Click(object sender, EventArgs e)
@@ -92,7 +92,7 @@ namespace GUI
 
         private void btnUpd_Click(object sender, EventArgs e)
         {
-            if (txtDieuTriID.Text == "" || txtChanDoanID.Text == "" || txtDonVi.Text == "" || txtGia.Text == "")
+            /*if (txtDieuTriID.Text == "" || txtChanDoanID.Text == "" || txtDonVi.Text == "" || txtGia.Text == "")
             {
                 MessageBox.Show("Điền đầy đủ thông tin");
                 return;
@@ -106,12 +106,12 @@ namespace GUI
             }
             else MessageBox.Show("Không tồn tại mã điều trị", "Thông Báo", MessageBoxButtons.OK);
             reLoad();
-            clear();
+            clear();*/
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (txtDieuTriID.Text == "" || txtChanDoanID.Text == "" || txtDonVi.Text == "" || txtGia.Text == "")
+            /*if (txtDieuTriID.Text == "" || txtChanDoanID.Text == "" || txtDonVi.Text == "" || txtGia.Text == "")
             {
                 MessageBox.Show("Điền đầy đủ thông tin");
                 return;
@@ -125,7 +125,7 @@ namespace GUI
             }
             else MessageBox.Show("Không tồn tại mã điều trị", "Thông Báo", MessageBoxButtons.OK);
             reLoad();
-            clear();
+            clear();*/
         }
     }
 }

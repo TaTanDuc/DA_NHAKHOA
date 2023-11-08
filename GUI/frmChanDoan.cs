@@ -13,7 +13,7 @@ namespace GUI
 {
     public partial class frmChanDoan : Form
     {
-        private readonly DichVu_Services dichVu_Services = new DichVu_Services();
+        private readonly Service_Services dichVu_Services = new Service_Services();
         public frmChanDoan()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace GUI
 
         public void reLoad()
         {
-            dgvChanDoan.Rows.Clear();
+            /*dgvChanDoan.Rows.Clear();
             foreach (var item in dichVu_Services.GetAllDiagnose())
             {
                 var index = dgvChanDoan.Rows.Add();
@@ -29,7 +29,7 @@ namespace GUI
                 dgvChanDoan.Rows[index].Cells[0].Value = item.DiagnoseID;
                 dgvChanDoan.Rows[index].Cells[1].Value = item.DiagnosticContent;
 
-            }
+            }*/
         }
 
         private void frmChanDoan_Load(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace GUI
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 var diagnose = new Diagnose() { DiagnoseID = Convert.ToInt32(txtChanDoanID.Text), DiagnosticContent = txtPhuongThuc.Text };
                 if (txtChanDoanID.Text == "")
@@ -61,12 +61,12 @@ namespace GUI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK);
-            }
+            }*/
         }
 
         private void btnUpd_Click(object sender, EventArgs e)
         {
-            var diagnose = new Diagnose() { DiagnoseID = Convert.ToInt32(txtChanDoanID.Text), DiagnosticContent = txtPhuongThuc.Text };
+            /*var diagnose = new Diagnose() { DiagnoseID = Convert.ToInt32(txtChanDoanID.Text), DiagnosticContent = txtPhuongThuc.Text };
             if (dichVu_Services.GetDiagnose(Convert.ToInt32(txtChanDoanID.Text)) != null)
             {
                 dichVu_Services.addOrUpdateDiagnose(diagnose);
@@ -77,12 +77,12 @@ namespace GUI
                 MessageBox.Show("Không tìm thấy dịch vụ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             refres();
-            reLoad();
+            reLoad();*/
         }
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 var diagnose = new Diagnose() { DiagnoseID = Convert.ToInt32(txtChanDoanID.Text), DiagnosticContent = txtPhuongThuc.Text };
                 if (dichVu_Services.GetDiagnose(Convert.ToInt32(txtChanDoanID.Text)) != null)
@@ -105,7 +105,7 @@ namespace GUI
                 MessageBox.Show(ex.Message);
             }
             refres() ;
-            reLoad();
+            reLoad();*/
         }
 
         private void btnExit_Click(object sender, EventArgs e)

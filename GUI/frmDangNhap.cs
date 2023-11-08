@@ -13,7 +13,7 @@ namespace GUI
 {
     public partial class frmDangNhap : Form
     {
-        private readonly Security_Services logIn_Services = new Security_Services();
+        private readonly User_Services user_Services = new User_Services();
         public frmDangNhap()
         {
             InitializeComponent();
@@ -46,13 +46,13 @@ namespace GUI
 
         private void gnbtnDangNhap_Click(object sender, EventArgs e)
         {
-            var temp = logIn_Services.LogIn(gntxtTaiKhoan.Text, gntxtMatKhau.Text);
+            var temp = user_Services.Login(gntxtTaiKhoan.Text, gntxtMatKhau.Text);
             switch (temp)
             {
-                case 1:
+                case true:
                     this.DialogResult = DialogResult.OK;
                     break;
-                case 0:
+                case false:
                     MessageBox.Show("Sai thông tin đăng nhập!", "Lỗi");
                     gntxtTaiKhoan.Focus();
                     break;
@@ -71,6 +71,14 @@ namespace GUI
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CreateAccount frmCreateAcc = new CreateAccount();
+            this.Hide();
+            frmCreateAcc.ShowDialog();
+            this.Show();
         }
     }
 }
