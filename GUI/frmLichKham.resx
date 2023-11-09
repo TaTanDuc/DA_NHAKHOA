@@ -120,9 +120,6 @@
   <metadata name="guna2BorderlessForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -135,14 +132,14 @@
   <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>192, 17</value>
+  <metadata name="cms.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>187, 22</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="guna2PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAA4dJREFUaEPtmclr1VAUhztJrXVRh+JUdFHdVFEEcSr+AeLCOoDUeS0iiKDipiJF
+        DAAACwwBP0AiyAAAA4dJREFUaEPtmclr1VAUhztJrXVRh+JUdFHdVFEEcSr+AeLCOoDUeS0iiKDipiJF
         RWzFqrjWjSLOIo5L3YkoKqIiIuLCcaHirPX73ZzYNM2b2jThwfvgg5Jz7j03ye3NS25ZiRIlShREd3d3
         Bc7HHXgOH+JH/IU/7e8HeBa341yssObpw2Am4V58jYXyCvfgBOsueSg+Bo+irvZA+YGHcZR1nwwUXIUf
         MIpveB07cSuuw1bcgLpzin3HKN7jciszeFCkEnUXwvzF87gQh1l6RsipxcV4BtU2zCGstPT4ofNNrkxv
@@ -163,7 +160,7 @@
   <data name="guna2Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAABElJREFUaEPtmV2IlUUYx9dVLExTw9UwRBNKo9YVqTCjRDQDvRCiULTELkKFxQ8E
+        DAAACwwBP0AiyAAABElJREFUaEPtmV2IlUUYx9dVLExTw9UwRBNKo9YVqTCjRDQDvRCiULTELkKFxQ8E
         sSLUSFZBFPPCGxER0QvBbgqKSoKotPBCBPWigiS/v78otZp+/2eekdNylN2z8x7P0vnBj3POM/M+M+++
         7zvvzGxDnTp16nSYEMIj2ILTcBa+is34sFepXejkCHwPf8C/sRy3cB8uwyF+aG1Ahx7FzXgTy3HVP9tz
         HdfgAE91/6ATb2FpRy/gNnwNh2Fvr/cg6orNxl1YesxZnGYJqw0N98A29cJRx1ZhP69yT6jXhBvxTxS6

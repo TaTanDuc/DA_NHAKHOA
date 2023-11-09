@@ -8,7 +8,7 @@ namespace DAL.Entities
     public partial class DentalClinicDB : DbContext
     {
         public DentalClinicDB()
-            : base("name=DentalClinicDB")
+            : base("name=DentalClinicDB1")
         {
         }
 
@@ -41,7 +41,13 @@ namespace DAL.Entities
                 .HasForeignKey(e => new { e.Appointment, e.PermissionID, e.UserID });
 
             modelBuilder.Entity<Detail>()
-                .HasOptional(e => e.ServicesDetail)
+                .HasMany(e => e.ServicesDetails)
+                .WithRequired(e => e.Detail)
+                .HasForeignKey(e => new { e.Appointment, e.PermissionID, e.UserID })
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Detail>()
+                .HasOptional(e => e.UsageDetail)
                 .WithRequired(e => e.Detail);
 
             modelBuilder.Entity<ImportExport>()
@@ -92,11 +98,12 @@ namespace DAL.Entities
                 .IsUnicode(false);
 
             modelBuilder.Entity<Schedule>()
-                .HasOptional(e => e.Detail)
-                .WithRequired(e => e.Schedule);
+                .Property(e => e.StatusID)
+                .IsFixedLength()
+                .IsUnicode(false);
 
             modelBuilder.Entity<Schedule>()
-                .HasOptional(e => e.UsageDetail)
+                .HasOptional(e => e.Detail)
                 .WithRequired(e => e.Schedule);
 
             modelBuilder.Entity<ServiceCategory>()

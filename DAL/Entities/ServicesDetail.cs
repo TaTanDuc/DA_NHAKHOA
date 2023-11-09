@@ -10,15 +10,20 @@ namespace DAL.Entities
     {
         [Key]
         [Column(Order = 0)]
-        public DateTime Appointment { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int Count { get; set; }
 
         [Key]
         [Column(Order = 1)]
+        public DateTime Appointment { get; set; }
+
+        [Key]
+        [Column(Order = 2)]
         [StringLength(2)]
         public string PermissionID { get; set; }
 
         [Key]
-        [Column(Order = 2)]
+        [Column(Order = 3)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int UserID { get; set; }
 

@@ -13,6 +13,20 @@ namespace BUS
 {
     public class Schedule_Services
     {
-        
+        public void Add(Schedule schedule)
+        {
+            using (var context = new DentalClinicDB())
+            {
+                context.Schedules.Add(schedule);
+                context.SaveChanges();
+            }
+        }
+
+        public List<Schedule> getAll()
+        {
+            var context = new DentalClinicDB();
+            context.Database.Connection.Open();
+            return context.Schedules.ToList();
+        }
     }
 }

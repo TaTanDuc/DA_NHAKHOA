@@ -14,16 +14,30 @@ namespace GUI
 {
     public partial class frmLichKham : Form
     {
-        private readonly Schedule_Services phieuKham_Services = new Schedule_Services();
+        private readonly Schedule_Services schedule_Services = new Schedule_Services();
         private readonly Status_Services status_Services = new Status_Services();
         public frmLichKham()
         {
             InitializeComponent();
         }
 
+        private void update(Schedule schedule)
+        {
+            dgvAllSchedule.Rows.Clear();
+            int index = dgvAllSchedule.Rows.Add();
+            dgvAllSchedule.Rows[index].Cells[0].Value = schedule.User.FullName;
+            dgvAllSchedule.Rows[index].Cells[1].Value = schedule.User.Phone;
+            dgvAllSchedule.Rows[index].Cells[2].Value = schedule.Appointment;
+            dgvAllSchedule.Rows[index].Cells[3].Value = schedule.Status.StatusName;
+        }
+
         private void frmQLLichKham_Load(object sender, EventArgs e)
         {
-
+            guna2DateTimePicker1.Value = DateTime.Now;
+            foreach(var item in schedule_Services.getAll())
+            {
+                update(item);
+            }
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -40,8 +54,8 @@ namespace GUI
 
         private void guna2DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int index = guna2DataGridView1.SelectedCells[0].RowIndex;
-            frmHoaDon frmHoaDon = new frmHoaDon(Convert.ToInt32(guna2DataGridView1.Rows[index].Cells[0].Value));
+            int index = dgvAllSchedule.SelectedCells[0].RowIndex;
+            frmInvoice frmHoaDon = new frmInvoice(Convert.ToInt32(dgvAllSchedule.Rows[index].Cells[0].Value));
             this.Hide();
             frmHoaDon.ShowDialog();
             frmHoaDon.Dispose();

@@ -60,5 +60,31 @@ namespace BUS
                 context.SaveChanges();
             }
         }
+
+        public User findByID(string permissionID, int userID)
+        {
+            using (var context = new DentalClinicDB())
+            {
+                return context.Users.FirstOrDefault(u => u.PermissionID == permissionID && u.UserID == userID);
+            }
+        }
+
+        public User findByPhone(string phone)
+        {
+            using (var context = new DentalClinicDB())
+            {
+                return context.Users.FirstOrDefault(u => u.Phone == phone);
+            }
+        }
+
+        public bool validateUser(string permissionID, int userID)
+        {
+            using (var context = new DentalClinicDB())
+            {
+                if (context.Users.FirstOrDefault(u => u.PermissionID == permissionID && u.UserID == userID) == null)
+                    return false;
+            }
+            return true;
+        }
     }
 }

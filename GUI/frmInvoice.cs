@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmHoaDon : Form
+    public partial class frmInvoice : Form
     {
         private readonly Invoice_Services hoaDon_Services = new Invoice_Services();
         private readonly Schedule_Services phieuKham_Services = new Schedule_Services();
-        public frmHoaDon(int id)
+        public frmInvoice(int id)
         {
         }
 

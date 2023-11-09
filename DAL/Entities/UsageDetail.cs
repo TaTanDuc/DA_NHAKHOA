@@ -31,7 +31,7 @@ namespace DAL.Entities
 
         public int? ItemNO { get; set; }
 
-        public virtual Schedule Schedule { get; set; }
+        public virtual Detail Detail { get; set; }
 
         public virtual Storage Storage { get; set; }
     }

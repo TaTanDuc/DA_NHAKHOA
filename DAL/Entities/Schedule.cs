@@ -23,10 +23,13 @@ namespace DAL.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int UserID { get; set; }
 
+        [StringLength(2)]
+        public string StatusID { get; set; }
+
         public virtual Detail Detail { get; set; }
 
         public virtual User User { get; set; }
 
-        public virtual UsageDetail UsageDetail { get; set; }
+        public virtual Status Status { get; set; }
     }
 }

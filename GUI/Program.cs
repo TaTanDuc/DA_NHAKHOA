@@ -18,14 +18,12 @@ namespace GUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            /*frmDangNhap dangNhap = new frmDangNhap();
+            frmDangNhap dangNhap = new frmDangNhap();
             if (dangNhap.ShowDialog() == DialogResult.OK)
             {
                 Application.Run(new frmTrangChu_new());
                 dangNhap.Close();
-            }*/
-
-            Application.Run(new frmCreateAppointment());
+            }
         }
     }
 }

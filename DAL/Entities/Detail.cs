@@ -12,6 +12,7 @@ namespace DAL.Entities
         public Detail()
         {
             Invoices = new HashSet<Invoice>();
+            ServicesDetails = new HashSet<ServicesDetail>();
         }
 
         [Key]
@@ -35,6 +36,9 @@ namespace DAL.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Invoice> Invoices { get; set; }
 
-        public virtual ServicesDetail ServicesDetail { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ServicesDetail> ServicesDetails { get; set; }
+
+        public virtual UsageDetail UsageDetail { get; set; }
     }
 }
